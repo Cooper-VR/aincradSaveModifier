@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "9U/pw2CLuFBwCMLtX1vLBHKtZxUl4gXR1HHrzBTaDrIeOCuP+T5skNKnCh2gcfyiv07z1GWgdPA73UF2D9V0OA==",
+  "success": true,
+  "projectFilePath": "D:\\cooper bower\\3d stuff\\gitHub\\visualStudio\\aincradSaveModifier\\aincradSaveModifier\\aincradSaveModifier.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Cooper Bower\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
