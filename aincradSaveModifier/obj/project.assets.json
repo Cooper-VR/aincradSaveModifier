@@ -61,11 +61,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\cooper bower\\3d stuff\\gitHub\\visualStudio\\aincradSaveModifier\\aincradSaveModifier\\aincradSaveModifier.csproj",
+      "projectUniqueName": "D:\\cooper bower\\3d stuff\\gitHub\\aincradSaveModifier\\aincradSaveModifier\\aincradSaveModifier.csproj",
       "projectName": "aincradSaveModifier",
-      "projectPath": "D:\\cooper bower\\3d stuff\\gitHub\\visualStudio\\aincradSaveModifier\\aincradSaveModifier\\aincradSaveModifier.csproj",
+      "projectPath": "D:\\cooper bower\\3d stuff\\gitHub\\aincradSaveModifier\\aincradSaveModifier\\aincradSaveModifier.csproj",
       "packagesPath": "C:\\Users\\Cooper Bower\\.nuget\\packages\\",
-      "outputPath": "D:\\cooper bower\\3d stuff\\gitHub\\visualStudio\\aincradSaveModifier\\aincradSaveModifier\\obj\\",
+      "outputPath": "D:\\cooper bower\\3d stuff\\gitHub\\aincradSaveModifier\\aincradSaveModifier\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
