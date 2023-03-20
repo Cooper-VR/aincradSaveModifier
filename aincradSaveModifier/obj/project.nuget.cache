@@ -1,10 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "Ywe02R6/+jRbV/jG7bvF5jwy26vwO8UlU0vPLo05yMpL6ZadXW26IkVsfZqBsMNQgYRc81l5yUtkpx1BMUY8ZA==",
+  "dgSpecHash": "1RUIzaJCXivISblHnE4BzIa0zvaYx7HHxan/t4tFfI2mcQwgNVTuLT/tCtL3pvkEVXg1HE+gWaUavzLYS78ThQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\cbowe540\\CooperBower\\gitHub\\aincradSaveModifier\\aincradSaveModifier\\aincradSaveModifier.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\cbowe540\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\cbowe540\\.nuget\\packages\\jsonsubtypes\\1.9.0\\jsonsubtypes.1.9.0.nupkg.sha512",
+    "C:\\Users\\cbowe540\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\cbowe540\\.nuget\\packages\\polly\\7.2.3\\polly.7.2.3.nupkg.sha512",
+    "C:\\Users\\cbowe540\\.nuget\\packages\\restsharp\\108.0.2\\restsharp.108.0.2.nupkg.sha512",
+    "C:\\Users\\cbowe540\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
+    "C:\\Users\\cbowe540\\.nuget\\packages\\vrchat.api\\1.11.1\\vrchat.api.1.11.1.nupkg.sha512"
   ],
   "logs": []
 }

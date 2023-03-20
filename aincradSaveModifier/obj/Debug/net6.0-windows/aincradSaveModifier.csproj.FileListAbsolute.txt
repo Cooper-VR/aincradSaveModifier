@@ -79,8 +79,10 @@ C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\obj
 C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\Theme\MenuButtonTheme.baml
 C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\Theme\TextBoxTheme.baml
 C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\App.baml
-C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\MVVM\View\HomeView.g.cs
 C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
-C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\MVVM\View\HomeView.baml
 C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\MVVM\View\DiscoveryView.g.cs
 C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\MVVM\View\DiscoveryView.baml
+C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\bin\Debug\net6.0-windows\JsonSubTypes.dll
+C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\bin\Debug\net6.0-windows\Polly.dll
+C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\bin\Debug\net6.0-windows\RestSharp.dll
+C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\bin\Debug\net6.0-windows\VRChat.API.dll

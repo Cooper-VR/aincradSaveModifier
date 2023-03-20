@@ -11,6 +11,13 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+
+
+
+  <ItemGroup>
+    <Page Remove="MVVM\View\HomeView.xaml" />
+  </ItemGroup>
+
   <ItemGroup>
     <COMReference Include="{215d64d2-031c-33c7-96e3-61794cd1ee61}">
       <WrapperTool>tlbimp</WrapperTool>
@@ -40,12 +47,17 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="VRChat.API" Version="1.11.1" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Fonts\" />
     <Folder Include="Images\" />
     <Folder Include="MVVM\Model\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="MVVM\View\HomeView.xaml" />
   </ItemGroup>
 
 </Project>
