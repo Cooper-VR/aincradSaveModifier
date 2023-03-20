@@ -55,24 +55,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Cooper Bower\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\cbowe540\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\cooper bower\\3d stuff\\gitHub\\aincradSaveModifier\\aincradSaveModifier\\aincradSaveModifier.csproj",
+      "projectUniqueName": "C:\\Users\\cbowe540\\CooperBower\\gitHub\\aincradSaveModifier\\aincradSaveModifier\\aincradSaveModifier.csproj",
       "projectName": "aincradSaveModifier",
-      "projectPath": "D:\\cooper bower\\3d stuff\\gitHub\\aincradSaveModifier\\aincradSaveModifier\\aincradSaveModifier.csproj",
-      "packagesPath": "C:\\Users\\Cooper Bower\\.nuget\\packages\\",
-      "outputPath": "D:\\cooper bower\\3d stuff\\gitHub\\aincradSaveModifier\\aincradSaveModifier\\obj\\",
+      "projectPath": "C:\\Users\\cbowe540\\CooperBower\\gitHub\\aincradSaveModifier\\aincradSaveModifier\\aincradSaveModifier.csproj",
+      "packagesPath": "C:\\Users\\cbowe540\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\cbowe540\\CooperBower\\gitHub\\aincradSaveModifier\\aincradSaveModifier\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Cooper Bower\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\cbowe540\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -122,7 +117,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

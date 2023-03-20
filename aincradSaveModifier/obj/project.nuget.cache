@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "SU7FSuDn+9rGJniebpOLZpHXDjWwv76ujNzGhVvwZYJuVL5hgackeINS+ObLJn3I5LOEUVrWYCwlto5UzhyCxA==",
+  "dgSpecHash": "Ywe02R6/+jRbV/jG7bvF5jwy26vwO8UlU0vPLo05yMpL6ZadXW26IkVsfZqBsMNQgYRc81l5yUtkpx1BMUY8ZA==",
   "success": true,
-  "projectFilePath": "D:\\cooper bower\\3d stuff\\gitHub\\aincradSaveModifier\\aincradSaveModifier\\aincradSaveModifier.csproj",
+  "projectFilePath": "C:\\Users\\cbowe540\\CooperBower\\gitHub\\aincradSaveModifier\\aincradSaveModifier\\aincradSaveModifier.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Cooper Bower\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\cbowe540\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }

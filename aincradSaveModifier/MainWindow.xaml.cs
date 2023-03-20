@@ -17,6 +17,7 @@ namespace aincradSaveModifier
 		{
 			InitializeComponent();
 
+			/*
 			//calls the function to get the path of the folder where the file is in
 			string path = this.getPath();
 			this.path.Text = path;
@@ -24,8 +25,10 @@ namespace aincradSaveModifier
 			//completes the path for the json files
 			this.stats = path + "\\avtr_5def9d3c-c59e-4b77-91fd-c7b23323db58";
 			this.inventory = path + "\\avtr_73e1a1b0-d9b9-4dc4-9544-5dae72ea8e64";
+		*/
 		}
 
+		/*
 		#region private helpers
 		/// <summary>
 		/// turns json data into a dictionary, works with any file type as long as its in json format, returns the json data in a dictionary format
@@ -321,6 +324,6 @@ namespace aincradSaveModifier
 
 			#endregion
 		}
-		#endregion
+		#endregion */
 	}
 }
