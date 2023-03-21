@@ -79,24 +79,50 @@
             </Border>
 
         </StackPanel>
-        <Grid Height="188">
-            <Grid.RowDefinitions>
-                <RowDefinition />
-                <RowDefinition />
-            </Grid.RowDefinitions>
-            <Button Content="Login" Height="70" Width="100" FontSize="30" HorizontalAlignment="Left" Background="Green" BorderThickness="3" BorderBrush="Black" ></Button>
-            <StackPanel Grid.Row="1" Orientation="Horizontal">
-                <TextBlock
-                    VerticalAlignment="Center"
-                    FontSize="40"
-                    Foreground="White"
-                    Text="status: " />
-                <TextBlock
-                    VerticalAlignment="Center"
-                    FontSize="40"
-                    Foreground="White"
-                    Text="not loged in " />
-            </StackPanel>
-        </Grid>
+        <StackPanel Margin="10,0,0,0" Orientation="Horizontal">
+            <Border
+                Width="100"
+                Height="70"
+                HorizontalAlignment="Left"
+                CornerRadius="20">
+                <Button
+                    Name="LoginButton"
+                    Width="100"
+                    Height="70"
+                    Background="#1fa8d1"
+                    Click="LoginUser"
+                    Content="Login"
+                    FontSize="30" />
+            </Border>
+
+            <Border
+                Width="200"
+                Height="40"
+                Margin="30,0,0,0"
+                Background="#333540"
+                CornerRadius="10">
+                <Grid>
+                    <Rectangle StrokeThickness="1" />
+                    <TextBox
+                        x:Name="SearchBox"
+                        Height="30"
+                        Margin="1"
+                        Padding="5"
+                        VerticalContentAlignment="Center"
+                        Background="Transparent"
+                        BorderThickness="0"
+                        Foreground="#CFCFCF" />
+                    <TextBlock
+                        Width="200"
+                        Height="40"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="11"
+                        Foreground="DarkGray"
+                        IsHitTestVisible="False"
+                        Text="" />
+                </Grid>
+            </Border>
+        </StackPanel>
     </StackPanel>
 </UserControl>

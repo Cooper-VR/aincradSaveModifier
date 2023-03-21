@@ -1,13 +1,615 @@
-﻿<UserControl x:Class="aincradSaveModifier.MVVM.View.DiscoveryView"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:aincradSaveModifier.MVVM.View"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800"
-             Background="#1B1B1B">
+﻿<UserControl
+    x:Class="aincradSaveModifier.MVVM.View.DiscoveryView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:aincradSaveModifier.MVVM.View"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    Background="#1B1B1B"
+    mc:Ignorable="d">
     <Grid>
-            
+        <Grid Grid.Column="0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <TextBlock
+                    Grid.Row="0"
+                    Text="experence 0-65536"
+                    TextAlignment="Center" />
+                <Slider
+                    Name="exp"
+                    Grid.Row="0"
+                    Margin="0,20,0,0"
+                    Maximum="65536"
+                    Minimum="0"
+                    TickFrequency="1"
+                    TickPlacement="Both" />
+                <TextBlock
+                    Grid.Row="1"
+                    Text="Health"
+                    TextAlignment="Center" />
+                <Slider
+                    Name="health"
+                    Grid.Row="1"
+                    Margin="0,20,0,0"
+                    Maximum="250"
+                    Minimum="0"
+                    TickFrequency="1"
+                    TickPlacement="Both" />
+                <TextBlock
+                    Grid.Row="2"
+                    Text="Col"
+                    TextAlignment="Center" />
+                <Slider
+                    Name="col"
+                    Grid.Row="2"
+                    Margin="0,20,0,0"
+                    Maximum="65535"
+                    Minimum="0"
+                    TickFrequency="1"
+                    TickPlacement="Both" />
+                <TextBlock
+                    Grid.Row="3"
+                    Text="x"
+                    TextAlignment="Center" />
+                <Slider
+                    Name="x"
+                    Grid.Row="3"
+                    Margin="0,20,0,0"
+                    Maximum="100"
+                    Minimum="-100" />
+                <TextBlock
+                    Grid.Row="4"
+                    Text="y"
+                    TextAlignment="Center" />
+                <Slider
+                    Name="y"
+                    Grid.Row="4"
+                    Margin="0,20,0,0"
+                    Maximum="100"
+                    Minimum="-100" />
+                <TextBlock
+                    Grid.Row="5"
+                    Text="z"
+                    TextAlignment="Center" />
+                <Slider
+                    Name="z"
+                    Grid.Row="5"
+                    Margin="0,20,0,0"
+                    Maximum="100"
+                    Minimum="-100" />
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20*" />
+                    <RowDefinition Height="30*" />
+                    <RowDefinition Height="30*" />
+                    <RowDefinition Height="30*" />
+                    <RowDefinition Height="30*" />
+                    <RowDefinition Height="30*" />
+                    <RowDefinition Height="30*" />
+                    <RowDefinition Height="30*" />
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="items" />
+                <TextBlock Grid.Column="1" Text="weapons" />
+
+                <ListBox
+                    Name="item0"
+                    Grid.Row="1"
+                    Width="170"
+                    HorizontalAlignment="Left">
+                    <ListBoxItem Content="teleport" />
+                    <ListBoxItem Content="mirror" />
+                    <ListBoxItem Content="healing crystal" />
+                    <ListBoxItem Content="curing crystal" />
+                    <ListBoxItem Content="potion" />
+                    <ListBoxItem Content="firework" />
+                    <ListBoxItem Content="punpkin" />
+                </ListBox>
+                <TextBox
+                    Name="slot0Amount"
+                    Grid.Row="1"
+                    Width="30"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    Text="int"
+                    TextAlignment="Center" />
+
+                <ListBox
+                    Name="item1"
+                    Grid.Row="2"
+                    Width="170"
+                    HorizontalAlignment="Left">
+                    <ListBoxItem Content="teleport" />
+                    <ListBoxItem Content="mirror" />
+                    <ListBoxItem Content="healing crystal" />
+                    <ListBoxItem Content="curing crystal" />
+                    <ListBoxItem Content="potion" />
+                    <ListBoxItem Content="firework" />
+                    <ListBoxItem Content="punpkin" />
+                </ListBox>
+                <TextBox
+                    Name="slot1Amount"
+                    Grid.Row="2"
+                    Width="30"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    Text="int"
+                    TextAlignment="Center" />
+                <ListBox
+                    Name="item2"
+                    Grid.Row="3"
+                    Width="170"
+                    HorizontalAlignment="Left">
+                    <ListBoxItem Content="teleport" />
+                    <ListBoxItem Content="mirror" />
+                    <ListBoxItem Content="healing crystal" />
+                    <ListBoxItem Content="curing crystal" />
+                    <ListBoxItem Content="potion" />
+                    <ListBoxItem Content="firework" />
+                    <ListBoxItem Content="punpkin" />
+                </ListBox>
+                <TextBox
+                    Name="slot2Amount"
+                    Grid.Row="3"
+                    Width="30"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    Text="int"
+                    TextAlignment="Center" />
+                <ListBox
+                    Name="item3"
+                    Grid.Row="4"
+                    Width="170"
+                    HorizontalAlignment="Left">
+                    <ListBoxItem Content="teleport" />
+                    <ListBoxItem Content="mirror" />
+                    <ListBoxItem Content="healing crystal" />
+                    <ListBoxItem Content="curing crystal" />
+                    <ListBoxItem Content="potion" />
+                    <ListBoxItem Content="firework" />
+                    <ListBoxItem Content="punpkin" />
+                </ListBox>
+                <TextBox
+                    Name="slot3Amount"
+                    Grid.Row="4"
+                    Width="30"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    Text="int"
+                    TextAlignment="Center" />
+                <ListBox
+                    Name="item4"
+                    Grid.Row="5"
+                    Width="170"
+                    HorizontalAlignment="Left">
+                    <ListBoxItem Content="teleport" />
+                    <ListBoxItem Content="mirror" />
+                    <ListBoxItem Content="healing crystal" />
+                    <ListBoxItem Content="curing crystal" />
+                    <ListBoxItem Content="potion" />
+                    <ListBoxItem Content="firework" />
+                    <ListBoxItem Content="punpkin" />
+                </ListBox>
+                <TextBox
+                    Name="slot4Amount"
+                    Grid.Row="5"
+                    Width="30"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    Text="int"
+                    TextAlignment="Center" />
+                <ListBox
+                    Name="item5"
+                    Grid.Row="6"
+                    Width="170"
+                    HorizontalAlignment="Left">
+                    <ListBoxItem Content="teleport" />
+                    <ListBoxItem Content="mirror" />
+                    <ListBoxItem Content="healing crystal" />
+                    <ListBoxItem Content="curing crystal" />
+                    <ListBoxItem Content="potion" />
+                    <ListBoxItem Content="firework" />
+                    <ListBoxItem Content="punpkin" />
+                </ListBox>
+                <TextBox
+                    Name="slot5Amount"
+                    Grid.Row="6"
+                    Width="30"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    Text="int"
+                    TextAlignment="Center" />
+                <ListBox
+                    Name="item6"
+                    Grid.Row="7"
+                    Width="170"
+                    HorizontalAlignment="Left">
+                    <ListBoxItem Content="teleport" />
+                    <ListBoxItem Content="mirror" />
+                    <ListBoxItem Content="healing crystal" />
+                    <ListBoxItem Content="curing crystal" />
+                    <ListBoxItem Content="potion" />
+                    <ListBoxItem Content="firework" />
+                    <ListBoxItem Content="punpkin" />
+                </ListBox>
+                <TextBox
+                    Name="slot6Amount"
+                    Grid.Row="7"
+                    Width="30"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    Text="int"
+                    TextAlignment="Center" />
+
+                <ListBox
+                    Name="weapons0"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Width="200"
+                    HorizontalAlignment="Left">
+                    <ListBoxItem Content="black great sword" />
+                    <ListBoxItem Content="dark repulser" />
+                    <ListBoxItem Content="wooden sword" />
+                    <ListBoxItem Content="excalibur" />
+                    <ListBoxItem Content="excalibur pf" />
+                    <ListBoxItem Content="blue long sword" />
+                    <ListBoxItem Content="ground gorge" />
+                    <ListBoxItem Content="prometheus wrath" />
+                    <ListBoxItem Content="vespid rapier" />
+                    <ListBoxItem Content="blood thorn" />
+                    <ListBoxItem Content="divine blade" />
+                    <ListBoxItem Content="dragon slayer" />
+                    <ListBoxItem Content="iron katana" />
+                    <ListBoxItem Content="iron sword" />
+                    <ListBoxItem Content="iron spear" />
+                    <ListBoxItem Content="steel sword" />
+                    <ListBoxItem Content="abyssal cleaver" />
+                    <ListBoxItem Content="carrot claymore" />
+                    <ListBoxItem Content="carrot clunker" />
+                    <ListBoxItem Content="carrot impaler" />
+                    <ListBoxItem Content="cocoa clash" />
+
+                    <ListBoxItem Content="cocoa Stream" />
+                    <ListBoxItem Content="cocoa Thunder" />
+                    <ListBoxItem Content="rageout Rage" />
+                    <ListBoxItem Content="rageout Ripper" />
+                    <ListBoxItem Content="witch Broom" />
+                    <ListBoxItem Content="were Tears" />
+                    <ListBoxItem Content="soul Chiller" />
+                    <ListBoxItem Content="grave Dagger" />
+                    <ListBoxItem Content="monster Masher" />
+                    <ListBoxItem Content="elucidator" />
+                    <ListBoxItem Content="lampentLight" />
+                    <ListBoxItem Content="bronzeDagger" />
+                    <ListBoxItem Content="bronze Greataxe" />
+                    <ListBoxItem Content="bronze GreatSword" />
+                    <ListBoxItem Content="bronze Mace" />
+                    <ListBoxItem Content="bronze Rapiar" />
+                    <ListBoxItem Content="bronze Spear" />
+                    <ListBoxItem Content="bronze Sword" />
+                    <ListBoxItem Content="quartanier" />
+                    <ListBoxItem Content="iron Axe" />
+                    <ListBoxItem Content="Axemas" />
+                    <ListBoxItem Content="Blittzard" />
+                </ListBox>
+                <ListBox
+                    Name="weapons1"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Width="200"
+                    HorizontalAlignment="Left">
+                    <ListBoxItem Content="black great sword" />
+                    <ListBoxItem Content="dark repulser" />
+                    <ListBoxItem Content="wooden sword" />
+                    <ListBoxItem Content="excalibur" />
+                    <ListBoxItem Content="excalibur pf" />
+                    <ListBoxItem Content="blue long sword" />
+                    <ListBoxItem Content="ground gorge" />
+                    <ListBoxItem Content="prometheus wrath" />
+                    <ListBoxItem Content="vespid rapier" />
+                    <ListBoxItem Content="blood thorn" />
+                    <ListBoxItem Content="divine blade" />
+                    <ListBoxItem Content="dragon slayer" />
+                    <ListBoxItem Content="iron katana" />
+                    <ListBoxItem Content="iron sword" />
+                    <ListBoxItem Content="iron spear" />
+                    <ListBoxItem Content="steel sword" />
+                    <ListBoxItem Content="abyssal cleaver" />
+                    <ListBoxItem Content="carrot claymore" />
+                    <ListBoxItem Content="carrot clunker" />
+                    <ListBoxItem Content="carrot impaler" />
+                    <ListBoxItem Content="cocoa clash" />
+                    <ListBoxItem Content="cocoa Stream" />
+                    <ListBoxItem Content="cocoa Thunder" />
+                    <ListBoxItem Content="rageout Rage" />
+                    <ListBoxItem Content="rageout Ripper" />
+                    <ListBoxItem Content="witch Broom" />
+                    <ListBoxItem Content="were Tears" />
+                    <ListBoxItem Content="soul Chiller" />
+                    <ListBoxItem Content="grave Dagger" />
+                    <ListBoxItem Content="monster Masher" />
+                    <ListBoxItem Content="elucidator" />
+                    <ListBoxItem Content="lampentLight" />
+                    <ListBoxItem Content="bronzeDagger" />
+                    <ListBoxItem Content="bronze Greataxe" />
+                    <ListBoxItem Content="bronze GreatSword" />
+                    <ListBoxItem Content="bronze Mace" />
+                    <ListBoxItem Content="bronze Rapiar" />
+                    <ListBoxItem Content="bronze Spear" />
+                    <ListBoxItem Content="bronze Sword" />
+                    <ListBoxItem Content="quartanier" />
+                    <ListBoxItem Content="iron Axe" />
+                    <ListBoxItem Content="Axemas" />
+                    <ListBoxItem Content="Blittzard" />
+                </ListBox>
+                <ListBox
+                    Name="weapons2"
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Width="200"
+                    HorizontalAlignment="Left">
+                    <ListBoxItem Content="black great sword" />
+                    <ListBoxItem Content="dark repulser" />
+                    <ListBoxItem Content="wooden sword" />
+                    <ListBoxItem Content="excalibur" />
+                    <ListBoxItem Content="excalibur pf" />
+                    <ListBoxItem Content="blue long sword" />
+                    <ListBoxItem Content="ground gorge" />
+                    <ListBoxItem Content="prometheus wrath" />
+                    <ListBoxItem Content="vespid rapier" />
+                    <ListBoxItem Content="blood thorn" />
+                    <ListBoxItem Content="divine blade" />
+                    <ListBoxItem Content="dragon slayer" />
+                    <ListBoxItem Content="iron katana" />
+                    <ListBoxItem Content="iron sword" />
+                    <ListBoxItem Content="iron spear" />
+                    <ListBoxItem Content="steel sword" />
+                    <ListBoxItem Content="abyssal cleaver" />
+                    <ListBoxItem Content="carrot claymore" />
+                    <ListBoxItem Content="carrot clunker" />
+                    <ListBoxItem Content="carrot impaler" />
+                    <ListBoxItem Content="cocoa clash" />
+                    <ListBoxItem Content="cocoa Stream" />
+                    <ListBoxItem Content="cocoa Thunder" />
+                    <ListBoxItem Content="rageout Rage" />
+                    <ListBoxItem Content="rageout Ripper" />
+                    <ListBoxItem Content="witch Broom" />
+                    <ListBoxItem Content="were Tears" />
+                    <ListBoxItem Content="soul Chiller" />
+                    <ListBoxItem Content="grave Dagger" />
+                    <ListBoxItem Content="monster Masher" />
+                    <ListBoxItem Content="elucidator" />
+                    <ListBoxItem Content="lampentLight" />
+                    <ListBoxItem Content="bronzeDagger" />
+                    <ListBoxItem Content="bronze Greataxe" />
+                    <ListBoxItem Content="bronze GreatSword" />
+                    <ListBoxItem Content="bronze Mace" />
+                    <ListBoxItem Content="bronze Rapiar" />
+                    <ListBoxItem Content="bronze Spear" />
+                    <ListBoxItem Content="bronze Sword" />
+                    <ListBoxItem Content="quartanier" />
+                    <ListBoxItem Content="iron Axe" />
+                    <ListBoxItem Content="Axemas" />
+                    <ListBoxItem Content="Blittzard" />
+                </ListBox>
+                <ListBox
+                    Name="weapons3"
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    Width="200"
+                    HorizontalAlignment="Left">
+                    <ListBoxItem Content="black great sword" />
+                    <ListBoxItem Content="dark repulser" />
+                    <ListBoxItem Content="wooden sword" />
+                    <ListBoxItem Content="excalibur" />
+                    <ListBoxItem Content="excalibur pf" />
+                    <ListBoxItem Content="blue long sword" />
+                    <ListBoxItem Content="ground gorge" />
+                    <ListBoxItem Content="prometheus wrath" />
+                    <ListBoxItem Content="vespid rapier" />
+                    <ListBoxItem Content="blood thorn" />
+                    <ListBoxItem Content="divine blade" />
+                    <ListBoxItem Content="dragon slayer" />
+                    <ListBoxItem Content="iron katana" />
+                    <ListBoxItem Content="iron sword" />
+                    <ListBoxItem Content="iron spear" />
+                    <ListBoxItem Content="steel sword" />
+                    <ListBoxItem Content="abyssal cleaver" />
+                    <ListBoxItem Content="carrot claymore" />
+                    <ListBoxItem Content="carrot clunker" />
+                    <ListBoxItem Content="carrot impaler" />
+                    <ListBoxItem Content="cocoa clash" />
+                    <ListBoxItem Content="cocoa Stream" />
+                    <ListBoxItem Content="cocoa Thunder" />
+                    <ListBoxItem Content="rageout Rage" />
+                    <ListBoxItem Content="rageout Ripper" />
+                    <ListBoxItem Content="witch Broom" />
+                    <ListBoxItem Content="were Tears" />
+                    <ListBoxItem Content="soul Chiller" />
+                    <ListBoxItem Content="grave Dagger" />
+                    <ListBoxItem Content="monster Masher" />
+                    <ListBoxItem Content="elucidator" />
+                    <ListBoxItem Content="lampentLight" />
+                    <ListBoxItem Content="bronzeDagger" />
+                    <ListBoxItem Content="bronze Greataxe" />
+                    <ListBoxItem Content="bronze GreatSword" />
+                    <ListBoxItem Content="bronze Mace" />
+                    <ListBoxItem Content="bronze Rapiar" />
+                    <ListBoxItem Content="bronze Spear" />
+                    <ListBoxItem Content="bronze Sword" />
+                    <ListBoxItem Content="quartanier" />
+                    <ListBoxItem Content="iron Axe" />
+                    <ListBoxItem Content="Axemas" />
+                    <ListBoxItem Content="Blittzard" />
+                </ListBox>
+                <ListBox
+                    Name="weapons4"
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    Width="200"
+                    HorizontalAlignment="Left">
+                    <ListBoxItem Content="black great sword" />
+                    <ListBoxItem Content="dark repulser" />
+                    <ListBoxItem Content="wooden sword" />
+                    <ListBoxItem Content="excalibur" />
+                    <ListBoxItem Content="excalibur pf" />
+                    <ListBoxItem Content="blue long sword" />
+                    <ListBoxItem Content="ground gorge" />
+                    <ListBoxItem Content="prometheus wrath" />
+                    <ListBoxItem Content="vespid rapier" />
+                    <ListBoxItem Content="blood thorn" />
+                    <ListBoxItem Content="divine blade" />
+                    <ListBoxItem Content="dragon slayer" />
+                    <ListBoxItem Content="iron katana" />
+                    <ListBoxItem Content="iron sword" />
+                    <ListBoxItem Content="iron spear" />
+                    <ListBoxItem Content="steel sword" />
+                    <ListBoxItem Content="abyssal cleaver" />
+                    <ListBoxItem Content="carrot claymore" />
+                    <ListBoxItem Content="carrot clunker" />
+                    <ListBoxItem Content="carrot impaler" />
+                    <ListBoxItem Content="cocoa clash" />
+                    <ListBoxItem Content="cocoa Stream" />
+                    <ListBoxItem Content="cocoa Thunder" />
+                    <ListBoxItem Content="rageout Rage" />
+                    <ListBoxItem Content="rageout Ripper" />
+                    <ListBoxItem Content="witch Broom" />
+                    <ListBoxItem Content="were Tears" />
+                    <ListBoxItem Content="soul Chiller" />
+                    <ListBoxItem Content="grave Dagger" />
+                    <ListBoxItem Content="monster Masher" />
+                    <ListBoxItem Content="elucidator" />
+                    <ListBoxItem Content="lampentLight" />
+                    <ListBoxItem Content="bronzeDagger" />
+                    <ListBoxItem Content="bronze Greataxe" />
+                    <ListBoxItem Content="bronze GreatSword" />
+                    <ListBoxItem Content="bronze Mace" />
+                    <ListBoxItem Content="bronze Rapiar" />
+                    <ListBoxItem Content="bronze Spear" />
+                    <ListBoxItem Content="bronze Sword" />
+                    <ListBoxItem Content="quartanier" />
+                    <ListBoxItem Content="iron Axe" />
+                    <ListBoxItem Content="Axemas" />
+                    <ListBoxItem Content="Blittzard" />
+                </ListBox>
+                <ListBox
+                    Name="weapons5"
+                    Grid.Row="6"
+                    Grid.Column="1"
+                    Width="200"
+                    HorizontalAlignment="Left">
+                    <ListBoxItem Content="black great sword" />
+                    <ListBoxItem Content="dark repulser" />
+                    <ListBoxItem Content="wooden sword" />
+                    <ListBoxItem Content="excalibur" />
+                    <ListBoxItem Content="excalibur pf" />
+                    <ListBoxItem Content="blue long sword" />
+                    <ListBoxItem Content="ground gorge" />
+                    <ListBoxItem Content="prometheus wrath" />
+                    <ListBoxItem Content="vespid rapier" />
+                    <ListBoxItem Content="blood thorn" />
+                    <ListBoxItem Content="divine blade" />
+                    <ListBoxItem Content="dragon slayer" />
+                    <ListBoxItem Content="iron katana" />
+                    <ListBoxItem Content="iron sword" />
+                    <ListBoxItem Content="iron spear" />
+                    <ListBoxItem Content="steel sword" />
+                    <ListBoxItem Content="abyssal cleaver" />
+                    <ListBoxItem Content="carrot claymore" />
+                    <ListBoxItem Content="carrot clunker" />
+                    <ListBoxItem Content="carrot impaler" />
+                    <ListBoxItem Content="cocoa clash" />
+                    <ListBoxItem Content="cocoa Stream" />
+                    <ListBoxItem Content="cocoa Thunder" />
+                    <ListBoxItem Content="rageout Rage" />
+                    <ListBoxItem Content="rageout Ripper" />
+                    <ListBoxItem Content="witch Broom" />
+                    <ListBoxItem Content="were Tears" />
+                    <ListBoxItem Content="soul Chiller" />
+                    <ListBoxItem Content="grave Dagger" />
+                    <ListBoxItem Content="monster Masher" />
+                    <ListBoxItem Content="elucidator" />
+                    <ListBoxItem Content="lampentLight" />
+                    <ListBoxItem Content="bronzeDagger" />
+                    <ListBoxItem Content="bronze Greataxe" />
+                    <ListBoxItem Content="bronze GreatSword" />
+                    <ListBoxItem Content="bronze Mace" />
+                    <ListBoxItem Content="bronze Rapiar" />
+                    <ListBoxItem Content="bronze Spear" />
+                    <ListBoxItem Content="bronze Sword" />
+                    <ListBoxItem Content="quartanier" />
+                    <ListBoxItem Content="iron Axe" />
+                    <ListBoxItem Content="Axemas" />
+                    <ListBoxItem Content="Blittzard" />
+                </ListBox>
+                <ListBox
+                    Name="weapons6"
+                    Grid.Row="7"
+                    Grid.Column="1"
+                    Width="200"
+                    HorizontalAlignment="Left">
+                    <ListBoxItem Content="black great sword" />
+                    <ListBoxItem Content="dark repulser" />
+                    <ListBoxItem Content="wooden sword" />
+                    <ListBoxItem Content="excalibur" />
+                    <ListBoxItem Content="excalibur pf" />
+                    <ListBoxItem Content="blue long sword" />
+                    <ListBoxItem Content="ground gorge" />
+                    <ListBoxItem Content="prometheus wrath" />
+                    <ListBoxItem Content="vespid rapier" />
+                    <ListBoxItem Content="blood thorn" />
+                    <ListBoxItem Content="divine blade" />
+                    <ListBoxItem Content="dragon slayer" />
+                    <ListBoxItem Content="iron katana" />
+                    <ListBoxItem Content="iron sword" />
+                    <ListBoxItem Content="iron spear" />
+                    <ListBoxItem Content="steel sword" />
+                    <ListBoxItem Content="abyssal cleaver" />
+                    <ListBoxItem Content="carrot claymore" />
+                    <ListBoxItem Content="carrot clunker" />
+                    <ListBoxItem Content="carrot impaler" />
+                    <ListBoxItem Content="cocoa clash" />
+                    <ListBoxItem Content="cocoa Stream" />
+                    <ListBoxItem Content="cocoa Thunder" />
+                    <ListBoxItem Content="rageout Rage" />
+                    <ListBoxItem Content="rageout Ripper" />
+                    <ListBoxItem Content="witch Broom" />
+                    <ListBoxItem Content="were Tears" />
+                    <ListBoxItem Content="soul Chiller" />
+                    <ListBoxItem Content="grave Dagger" />
+                    <ListBoxItem Content="monster Masher" />
+                    <ListBoxItem Content="elucidator" />
+                    <ListBoxItem Content="lampent Light" />
+                    <ListBoxItem Content="bronzeDagger" />
+                    <ListBoxItem Content="bronze Greataxe" />
+                    <ListBoxItem Content="bronze GreatSword" />
+                    <ListBoxItem Content="bronze Mace" />
+                    <ListBoxItem Content="bronze Rapiar" />
+                    <ListBoxItem Content="bronze Spear" />
+                    <ListBoxItem Content="bronze Sword" />
+                    <ListBoxItem Content="quartanier" />
+                    <ListBoxItem Content="iron Axe" />
+                    <ListBoxItem Content="Axemas" />
+                    <ListBoxItem Content="Blittzard" />
+                </ListBox>
+            </Grid>
+        </Grid>
     </Grid>
 </UserControl>
