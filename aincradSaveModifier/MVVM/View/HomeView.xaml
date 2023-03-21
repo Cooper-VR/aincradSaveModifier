@@ -40,10 +40,10 @@
                             Foreground="White"
                             Text="UserName" />
                         <TextBox
-                            Name="userName"
                             Margin="20,10,10,0"
                             FontSize="18"
                             Foreground="Black"
+                            Name="userName"
                             Text="" />
                     </StackPanel>
                 </Grid>
@@ -72,8 +72,8 @@
                             Foreground="White"
                             Text="Password" />
                         <PasswordBox
-                            Name="Password"
                             Margin="20,10,10,0"
+                            Name="Password"
                             FontSize="18"
                             Foreground="Black" />
                     </StackPanel>
@@ -87,61 +87,10 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
 
-            <Border
-                Width="100"
-                Height="70"
-                HorizontalAlignment="Left"
-                CornerRadius="20">
-                <Button
-                    Name="LoginButton"
-                    Width="100"
-                    Height="70"
-                    Background="#1fa8d1"
-                    Click="LoginUser"
-                    Content="Login"
-                    FontSize="30" />
+            <Border CornerRadius="20" Height="70" Width="100" HorizontalAlignment="Left" >
+                <Button Content="Login" Height="70" Width="100" FontSize="30"  Background="#1fa8d1" Name="LoginButton" Click="LoginUser"></Button>
             </Border>
-            <StackPanel Margin="150,0,0,0" Orientation="Horizontal">
-                <TextBlock
-                    Name="AuthMessage"
-                    Width="150"
-                    Height="50"
-                    Margin="0,25,0,0"
-                    FontFamily="/Fonts/#SAO UI TT"
-                    FontSize="26"
-                    Foreground="White"
-                    Text="Enter 2FA Code"
-                    TextAlignment="Center"
-                    Visibility="Collapsed" />
-                <Border
-                    Width="200"
-                    Height="40"
-                    Background="#333540"
-                    CornerRadius="10">
-                    <Grid>
-                        <Rectangle StrokeThickness="1" />
-                        <TextBox
-                            x:Name="AuthBox"
-                            Margin="1"
-                            Padding="5"
-                            VerticalContentAlignment="Center"
-                            Background="Transparent"
-                            BorderThickness="0"
-                            Foreground="#CFCFCF" />
-                        <TextBlock
-                            Grid.Column="1"
-                            Margin="10,0,0,0"
-                            HorizontalAlignment="left"
-                            VerticalAlignment="Center"
-                            FontSize="11"
-                            Foreground="DarkGray"
-                            IsHitTestVisible="False"
-                            Text="ApiKey" />
-                    </Grid>
-                </Border>
-            </StackPanel>
-
-
+            
             <StackPanel Grid.Row="1" Orientation="Horizontal">
                 <TextBlock
                     VerticalAlignment="Center"
@@ -149,10 +98,10 @@
                     Foreground="White"
                     Text="Status: " />
                 <TextBlock
-                    Name="Status"
                     VerticalAlignment="Center"
                     FontSize="40"
                     Foreground="White"
+                    Name="Status"
                     Text="not loged in " />
             </StackPanel>
         </Grid>

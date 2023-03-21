@@ -8,12 +8,10 @@ namespace aincradSaveModifier.MVVM.ViewModel
     {
         public RelayCommand HomeViewCommand { get; set; }
         public RelayCommand StatsViewCommand { get; set; }
-        public RelayCommand InventoryViewCommand { get; set; }
 
 
         public HomeViewModel HomeVM { get; set; }
         public StatsViewModel StatsVM { get; set; }
-        public InventoryViewModel InventoryVM { get; set; }
 
 
         private object _currentView;
@@ -29,8 +27,6 @@ namespace aincradSaveModifier.MVVM.ViewModel
         {
             HomeVM = new HomeViewModel();
             StatsVM = new StatsViewModel();
-            InventoryVM = new InventoryViewModel();
-
             CurrentView = HomeVM;
 
             HomeViewCommand = new RelayCommand(o =>
@@ -40,10 +36,6 @@ namespace aincradSaveModifier.MVVM.ViewModel
             StatsViewCommand = new RelayCommand(o =>
             {
                 CurrentView = StatsVM;
-            });
-            InventoryViewCommand = new RelayCommand(o =>
-            {
-                CurrentView = InventoryVM;
             });
         }
     }
