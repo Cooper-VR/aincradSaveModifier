@@ -28,7 +28,6 @@ D:\cooper bower\3d stuff\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debu
 D:\cooper bower\3d stuff\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\Interop.DXTRANSLib.dll
 D:\cooper bower\3d stuff\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\Interop.DXTMSFTLib.dll
 D:\cooper bower\3d stuff\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\aincradSaveModifier.csproj.ResolveComReference.cache
-D:\cooper bower\3d stuff\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\MainWindow.g.cs
 D:\cooper bower\3d stuff\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\App.g.cs
 D:\cooper bower\3d stuff\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\aincradSaveModifier_MarkupCompile.cache
 D:\cooper bower\3d stuff\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\aincradSaveModifier_MarkupCompile.lref
@@ -41,7 +40,6 @@ D:\cooper bower\3d stuff\gitHub\aincradSaveModifier\aincradSaveModifier\bin\Debu
 D:\cooper bower\3d stuff\gitHub\aincradSaveModifier\aincradSaveModifier\bin\Debug\net6.0-windows\aincradSaveModifier.dll
 D:\cooper bower\3d stuff\gitHub\aincradSaveModifier\aincradSaveModifier\bin\Debug\net6.0-windows\aincradSaveModifier.pdb
 D:\cooper bower\3d stuff\gitHub\aincradSaveModifier\aincradSaveModifier\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
-D:\cooper bower\3d stuff\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\MainWindow.baml
 D:\cooper bower\3d stuff\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\aincradSaveModifier.g.resources
 D:\cooper bower\3d stuff\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\aincradSaveModifier.GeneratedMSBuildEditorConfig.editorconfig
 D:\cooper bower\3d stuff\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\aincradSaveModifier.AssemblyInfoInputs.cache
@@ -86,3 +84,17 @@ C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\bin
 C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\bin\Debug\net6.0-windows\Polly.dll
 C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\bin\Debug\net6.0-windows\RestSharp.dll
 C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\bin\Debug\net6.0-windows\VRChat.API.dll
+D:\cooper bower\3d stuff\gitHub\aincradSaveModifier\aincradSaveModifier\bin\Debug\net6.0-windows\JsonSubTypes.dll
+D:\cooper bower\3d stuff\gitHub\aincradSaveModifier\aincradSaveModifier\bin\Debug\net6.0-windows\Polly.dll
+D:\cooper bower\3d stuff\gitHub\aincradSaveModifier\aincradSaveModifier\bin\Debug\net6.0-windows\RestSharp.dll
+D:\cooper bower\3d stuff\gitHub\aincradSaveModifier\aincradSaveModifier\bin\Debug\net6.0-windows\VRChat.API.dll
+D:\cooper bower\3d stuff\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\Theme\MenuButtonTheme.baml
+D:\cooper bower\3d stuff\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\Theme\TextBoxTheme.baml
+D:\cooper bower\3d stuff\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\MVVM\View\HomeView.g.cs
+D:\cooper bower\3d stuff\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\cooper bower\3d stuff\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\App.baml
+D:\cooper bower\3d stuff\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\MVVM\View\HomeView.baml
+D:\cooper bower\3d stuff\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\MainWindow.g.cs
+D:\cooper bower\3d stuff\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\MainWindow.baml
+D:\cooper bower\3d stuff\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\MVVM\View\StatsyView.g.cs
+D:\cooper bower\3d stuff\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\MVVM\View\StatsyView.baml

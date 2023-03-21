@@ -1,21 +1,22 @@
-﻿<Application x:Class="aincradSaveModifier.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:aincradSaveModifier"
-             xmlns:viewModel="clr-namespace:aincradSaveModifier.MVVM.ViewModel"
-             xmlns:view="clr-namespace:aincradSaveModifier.MVVM.View"
-             StartupUri="MainWindow.xaml">
+﻿<Application
+    x:Class="aincradSaveModifier.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:aincradSaveModifier"
+    xmlns:view="clr-namespace:aincradSaveModifier.MVVM.View"
+    xmlns:viewModel="clr-namespace:aincradSaveModifier.MVVM.ViewModel"
+    StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
-                <ResourceDictionary Source="Theme/TextBoxTheme.xaml"/>
+                <ResourceDictionary Source="Theme/MenuButtonTheme.xaml" />
+                <ResourceDictionary Source="Theme/TextBoxTheme.xaml" />
             </ResourceDictionary.MergedDictionaries>
             <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
-                <view:HomeView/>
+                <view:HomeView />
             </DataTemplate>
-            <DataTemplate DataType="{x:Type viewModel:DiscoveryViewModel}">
-                <view:DiscoveryView/>
+            <DataTemplate DataType="{x:Type viewModel:StatsViewModel}">
+                <view:DiscoveryView />
             </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>
