@@ -16,7 +16,10 @@
                 <view:HomeView />
             </DataTemplate>
             <DataTemplate DataType="{x:Type viewModel:StatsViewModel}">
-                <view:DiscoveryView />
+                <view:StatsView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:InventoryViewModel}">
+                <view:InventoryView/>
             </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>

@@ -5,6 +5,7 @@ using VRChat.API.Api;
 using VRChat.API.Client;
 using VRChat.API.Model;
 using System.Diagnostics;
+using System.Net;
 
 namespace aincradSaveModifier.MVVM.View
 {
@@ -41,8 +42,33 @@ namespace aincradSaveModifier.MVVM.View
 				}
 				else
 				{
+					Config = new Configuration();
+					
+					Config.AddApiKey("auth", this.AuthBox.Text);
+					Config.BasePath = "https://api.vrchat.cloud/api/1";
+
+					this.AuthBox.Visibility = Visibility.Visible;
+					this.AuthMessage.Visibility= Visibility.Visible;
 					Debug.WriteLine("Failed to get current user");
-					this.Status.Text = "login failed";
+					this.Status.Text = "Key Required";
+
+					var apiInstance = new AuthenticationApi(Config);
+					var twoFactorEmailCode = new TwoFactorEmailCode(this.AuthBox.Text); // TwoFactorEmailCode |  (optional) 
+
+					try
+					{
+						// Verify 2FA code
+						var cookie = new Cookie();
+						
+						Verify2FAEmailCodeResult result = apiInstance.Verify2FAEmailCode(twoFactorEmailCode);
+						Debug.WriteLine(result);
+					}
+					catch (ApiException er)
+					{
+						Debug.WriteLine("Exception when calling AuthenticationApi.Verify2FA: " + er.Message);
+						
+						Debug.WriteLine(er.StackTrace);
+					}
 				} 
 			}
 			catch (ApiException er)

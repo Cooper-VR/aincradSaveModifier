@@ -30,9 +30,9 @@
             <TextBlock
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
+                FontFamily="/Fonts/#SAO UI TT"
                 FontSize="22"
                 Foreground="White"
-                FontFamily="/Fonts/#SAO UI TT"
                 Text="SAO Modder" />
             <StackPanel Grid.Row="1">
                 <RadioButton
@@ -46,18 +46,19 @@
                     Style="{StaticResource MenuButtonTheme}" />
                 <RadioButton
                     Height="50"
-                    Command="{Binding DiscoveryViewCommand}"
+                    Command="{Binding StatsViewCommand}"
                     Content="Stats"
+                    FontFamily="/Fonts/#SAO UI TT"
                     FontSize="22"
                     Foreground="White"
-                    FontFamily="/Fonts/#SAO UI TT"
                     Style="{StaticResource MenuButtonTheme}" />
                 <RadioButton
                     Height="50"
+                    Command="{Binding InventoryViewCommand}"
                     Content="Inventory"
+                    FontFamily="/Fonts/#SAO UI TT"
                     FontSize="22"
                     Foreground="White"
-                    FontFamily="/Fonts/#SAO UI TT"
                     Style="{StaticResource MenuButtonTheme}" />
             </StackPanel>
             <TextBox
