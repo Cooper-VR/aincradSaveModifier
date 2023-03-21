@@ -12,7 +12,6 @@
     AllowsTransparency="True"
     Background="Transparent"
     ResizeMode="NoResize"
-    WindowStyle="none"
     mc:Ignorable="d">
     <Window.Resources>
         <FontFamily x:Key="CustomFont">/YourProjectName;component/Fonts/YourFontName.ttf#Your Font Name</FontFamily>
@@ -33,30 +32,33 @@
             <TextBlock
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
-                FontSize="22"
+                FontFamily="/Fonts/#SAO UI TT"
+                    FontSize="28"
                 Foreground="White"
-                Text="something" />
+                Text="Save Modder" />
             <StackPanel Grid.Row="1">
                 <RadioButton
                     Height="50"
                     Command="{Binding HomeViewCommand}"
                     Content="Home"
-                    FontFamily="{StaticResource saoRegular}"
-                    FontSize="14"
+                    FontFamily="/Fonts/#SAO UI TT"
+                    FontSize="24"
                     Foreground="White"
                     IsChecked="True"
                     Style="{StaticResource MenuButtonTheme}" />
                 <RadioButton
                     Height="50"
                     Command="{Binding DiscoveryViewCommand}"
-                    Content="Home2"
-                    FontSize="14"
+                    Content="Stats"
+                    FontFamily="/Fonts/#SAO UI TT"
+                    FontSize="24"
                     Foreground="White"
                     Style="{StaticResource MenuButtonTheme}" />
                 <RadioButton
                     Height="50"
-                    Content="Home3"
-                    FontSize="14"
+                    Content="Inventory"
+                    FontFamily="/Fonts/#SAO UI TT"
+                    FontSize="24"
                     Foreground="White"
                     Style="{StaticResource MenuButtonTheme}" />
             </StackPanel>
