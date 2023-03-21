@@ -7,7 +7,7 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="MVVM\View\StatsyView.xaml.cs">
+    <Compile Update="MVVM\View\DiscoveryView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="MVVM\View\HomeView.xaml.cs">
@@ -15,12 +15,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="MVVM\View\StatsyView.xaml">
+    <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MVVM\View\HomeView.xaml">
+    <Page Update="MVVM\View\DiscoveryView.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Resource Update="MVVM\View\HomeView.xaml">
+      <SubType>Designer</SubType>
+    </Resource>
     <Page Update="Theme\MenuButtonTheme.xaml">
       <SubType>Designer</SubType>
     </Page>

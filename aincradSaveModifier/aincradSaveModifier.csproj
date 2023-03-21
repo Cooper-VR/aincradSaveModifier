@@ -15,17 +15,7 @@
 
 
   <ItemGroup>
-    <None Remove="Fonts\SAO UI TT.ttf" />
-    <None Remove="Fonts\SAORegular.ttf" />
-    <None Remove="Fonts\SAOUI-Bold.otf" />
-    <None Remove="Fonts\SAOUI-Regular.otf" />
-    <None Remove="Fonts\SAOUITT-Bold.ttf" />
-    <None Remove="Fonts\SAOUITT-Regular.ttf" />
-    <None Remove="Fonts\SAOWelcome-Bold.otf" />
-    <None Remove="Fonts\SAOWelcome-Regular.otf" />
-    <None Remove="Fonts\SAOWelcomeTT-Bold.ttf" />
-    <None Remove="Fonts\SAOWelcomeTT-Regular.ttf" />
-    <None Remove="SAOUITT-Regular.ttf" />
+    <Page Remove="MVVM\View\HomeView.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -61,12 +51,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Fonts\" />
     <Folder Include="Images\" />
     <Folder Include="MVVM\Model\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Fonts\SAO UI TT.ttf" />
+    <Resource Include="MVVM\View\HomeView.xaml" />
   </ItemGroup>
 
 </Project>

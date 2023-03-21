@@ -1,11 +1,9 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.IO;
-using System.Security.Cryptography.X509Certificates;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Forms;
-using aincradSaveModifier.MVVM.View;
 
 namespace aincradSaveModifier
 {
@@ -19,22 +17,16 @@ namespace aincradSaveModifier
 		{
 			InitializeComponent();
 
-            string username = Environment.UserName;
-            
+			/*
 			//calls the function to get the path of the folder where the file is in
-			string path = "C:\\Users\\" + username + "\\AppData\\LocalLow\\VRChat\\VRChat\\LocalAvatarData";
+			string path = this.getPath();
+			this.path.Text = path;
 
-            //completes the path for the json files
-
-            HomeView home = new HomeView();
-
-			if (home.userID != string.Empty)
-			{
+			//completes the path for the json files
 			this.stats = path + "\\avtr_5def9d3c-c59e-4b77-91fd-c7b23323db58";
 			this.inventory = path + "\\avtr_73e1a1b0-d9b9-4dc4-9544-5dae72ea8e64";
-			}
-			
-        }
+		*/
+		}
 
 		/*
 		#region private helpers

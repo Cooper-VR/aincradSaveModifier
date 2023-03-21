@@ -43,7 +43,6 @@
                             Margin="20,10,10,0"
                             FontSize="18"
                             Foreground="Black"
-                            Name="userName"
                             Text="" />
                     </StackPanel>
                 </Grid>
@@ -73,7 +72,6 @@
                             Text="Password" />
                         <PasswordBox
                             Margin="20,10,10,0"
-                            Name="Password"
                             FontSize="18"
                             Foreground="Black" />
                     </StackPanel>
@@ -86,22 +84,17 @@
                 <RowDefinition />
                 <RowDefinition />
             </Grid.RowDefinitions>
-
-            <Border CornerRadius="20" Height="70" Width="100" HorizontalAlignment="Left" >
-                <Button Content="Login" Height="70" Width="100" FontSize="30"  Background="#1fa8d1" Name="LoginButton" Click="LoginUser"></Button>
-            </Border>
-            
+            <Button Content="Login" Height="70" Width="100" FontSize="30" HorizontalAlignment="Left" Background="Green" BorderThickness="3" BorderBrush="Black" ></Button>
             <StackPanel Grid.Row="1" Orientation="Horizontal">
                 <TextBlock
                     VerticalAlignment="Center"
                     FontSize="40"
                     Foreground="White"
-                    Text="Status: " />
+                    Text="status: " />
                 <TextBlock
                     VerticalAlignment="Center"
                     FontSize="40"
                     Foreground="White"
-                    Name="Status"
                     Text="not loged in " />
             </StackPanel>
         </Grid>
