@@ -6,10 +6,181 @@
     xmlns:local="clr-namespace:aincradSaveModifier.MVVM.View"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     d:DesignHeight="450"
-    d:DesignWidth="800"
+    d:DesignWidth="720"
     Background="#1B1B1B"
     mc:Ignorable="d">
-    <StackPanel>
-        
+    <StackPanel Orientation="Horizontal">
+        <StackPanel Width="320" Margin="40, 0, 0,0">
+            <StackPanel Height="150" Orientation="Horizontal">
+                <ListBox
+                    Name="item0"
+                    Width="170"
+                    Background="Transparent"
+                    Foreground="White"
+                    HorizontalAlignment="Left">
+                    <ListBoxItem Background="#093A4C" Content="teleport" />
+                    <ListBoxItem Background="#093A4C" Content="mirror" />
+                    <ListBoxItem Background="#093A4C" Content="healing crystal" />
+                    <ListBoxItem Background="#093A4C" Content="curing crystal" />
+                    <ListBoxItem Background="#093A4C" Content="potion" />
+                    <ListBoxItem Background="#093A4C" Content="firework" />
+                    <ListBoxItem Background="#093A4C" Content="punpkin" />
+                </ListBox>
+                <TextBox
+                    Name="slot0Amount"
+                    Width="115"
+                    VerticalAlignment="Center"
+                    Height="126"
+                    Margin="20, 0, 0, 0"
+                    FontSize="30"
+                    BorderThickness="0"
+                    Background="Transparent"
+                    Foreground="White"
+                    Text="Amount"
+                    TextAlignment="Center" />
+            </StackPanel>
+            <StackPanel Height="150" Orientation="Horizontal">
+                <ListBox
+                    Name="item1"
+                    Width="170"
+                    Background="Transparent"
+                    Foreground="White"
+                    HorizontalAlignment="Left">
+                    <ListBoxItem Background="#093A4C" Content="teleport" />
+                    <ListBoxItem Background="#093A4C" Content="mirror" />
+                    <ListBoxItem Background="#093A4C" Content="healing crystal" />
+                    <ListBoxItem Background="#093A4C" Content="curing crystal" />
+                    <ListBoxItem Background="#093A4C" Content="potion" />
+                    <ListBoxItem Background="#093A4C" Content="firework" />
+                    <ListBoxItem Background="#093A4C" Content="punpkin" />
+                </ListBox>
+                <TextBox
+                    Name="slot1Amount"
+                    Width="115"
+                    VerticalAlignment="Center"
+                    Height="126"
+                    Margin="20, 0, 0, 0"
+                    FontSize="30"
+                    BorderThickness="0"
+                    Background="Transparent"
+                    Foreground="White"
+                    Text="Amount"
+                    TextAlignment="Center" />
+            </StackPanel>
+            <StackPanel Height="150" Orientation="Horizontal">
+                <ListBox
+                    Name="item2"
+                    Width="170"
+                    Background="Transparent"
+                    Foreground="White"
+                    HorizontalAlignment="Left">
+                    <ListBoxItem Background="#093A4C" Content="teleport" />
+                    <ListBoxItem Background="#093A4C" Content="mirror" />
+                    <ListBoxItem Background="#093A4C" Content="healing crystal" />
+                    <ListBoxItem Background="#093A4C" Content="curing crystal" />
+                    <ListBoxItem Background="#093A4C" Content="potion" />
+                    <ListBoxItem Background="#093A4C" Content="firework" />
+                    <ListBoxItem Background="#093A4C" Content="punpkin" />
+                </ListBox>
+                <TextBox
+                    Name="slot2Amount"
+                    Width="115"
+                    VerticalAlignment="Center"
+                    Height="126"
+                    Margin="20, 0, 0, 0"
+                    FontSize="30"
+                    BorderThickness="0"
+                    Background="Transparent"
+                    Foreground="White"
+                    Text="Amount"
+                    TextAlignment="Center" />
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Width="320">
+            <StackPanel Height="150" Orientation="Horizontal">
+                <ListBox
+                    Name="item3"
+                    Width="170"
+                    Background="Transparent"
+                    Foreground="White"
+                    HorizontalAlignment="Left">
+                    <ListBoxItem Background="#093A4C" Content="teleport" />
+                    <ListBoxItem Background="#093A4C" Content="mirror" />
+                    <ListBoxItem Background="#093A4C" Content="healing crystal" />
+                    <ListBoxItem Background="#093A4C" Content="curing crystal" />
+                    <ListBoxItem Background="#093A4C" Content="potion" />
+                    <ListBoxItem Background="#093A4C" Content="firework" />
+                    <ListBoxItem Background="#093A4C" Content="punpkin" />
+                </ListBox>
+                <TextBox
+                    Name="slot3Amount"
+                    Width="115"
+                    VerticalAlignment="Center"
+                    Height="126"
+                    Margin="20, 0, 0, 0"
+                    FontSize="30"
+                    BorderThickness="0"
+                    Background="Transparent"
+                    Foreground="White"
+                    Text="Amount"
+                    TextAlignment="Center" />
+            </StackPanel>
+            <StackPanel Height="150" Orientation="Horizontal">
+                <ListBox
+                    Name="item4"
+                    Width="170"
+                    Background="Transparent"
+                    Foreground="White"
+                    HorizontalAlignment="Left">
+                    <ListBoxItem Background="#093A4C" Content="teleport" />
+                    <ListBoxItem Background="#093A4C" Content="mirror" />
+                    <ListBoxItem Background="#093A4C" Content="healing crystal" />
+                    <ListBoxItem Background="#093A4C" Content="curing crystal" />
+                    <ListBoxItem Background="#093A4C" Content="potion" />
+                    <ListBoxItem Background="#093A4C" Content="firework" />
+                    <ListBoxItem Background="#093A4C" Content="punpkin" />
+                </ListBox>
+                <TextBox
+                    Name="slot4Amount"
+                   Width="115"
+                    VerticalAlignment="Center"
+                    Height="126"
+                    Margin="20, 0, 0, 0"
+                    FontSize="30"
+                    BorderThickness="0"
+                    Background="Transparent"
+                    Foreground="White"
+                    Text="Amount"
+                    TextAlignment="Center" />
+            </StackPanel>
+            <StackPanel Height="150" Orientation="Horizontal">
+                <ListBox
+                    Name="item5"
+                    Width="170"
+                    Background="Transparent"
+                    Foreground="White"
+                    HorizontalAlignment="Left">
+                    <ListBoxItem Background="#093A4C" Content="teleport" />
+                    <ListBoxItem Background="#093A4C" Content="mirror" />
+                    <ListBoxItem Background="#093A4C" Content="healing crystal" />
+                    <ListBoxItem Background="#093A4C" Content="curing crystal" />
+                    <ListBoxItem Background="#093A4C" Content="potion" />
+                    <ListBoxItem Background="#093A4C" Content="firework" />
+                    <ListBoxItem Background="#093A4C" Content="punpkin" />
+                </ListBox>
+                <TextBox
+                    Name="slot5Amount"
+                   Width="115"
+                    VerticalAlignment="Center"
+                    Height="126"
+                    Margin="20, 0, 0, 0"
+                    FontSize="30"
+                    BorderThickness="0"
+                    Background="Transparent"
+                    Foreground="White"
+                    Text="Amount"
+                    TextAlignment="Center" />
+            </StackPanel>
+        </StackPanel>
     </StackPanel>
 </UserControl>

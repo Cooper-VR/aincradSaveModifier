@@ -1,11 +1,13 @@
-﻿<UserControl x:Class="aincradSaveModifier.MVVM.View.HomeView"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:aincradSaveModifier.MVVM.View"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+﻿<UserControl
+    x:Class="aincradSaveModifier.MVVM.View.HomeView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:aincradSaveModifier.MVVM.View"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="450"
+    d:DesignWidth="720"
+    mc:Ignorable="d">
     <StackPanel>
         <TextBlock
             Margin="0,0,0,20"
@@ -15,7 +17,7 @@
             Text="Login" />
         <StackPanel Orientation="Horizontal">
             <Border
-                Width="375"
+                Width="350"
                 Height="200"
                 Margin="5,5,0,0">
                 <Border.Background>
@@ -28,7 +30,7 @@
                     <RectangleGeometry
                         RadiusX="10"
                         RadiusY="10"
-                        Rect="0, 0, 375, 200" />
+                        Rect="0, 0, 350, 200" />
                 </Border.Clip>
                 <Grid>
                     <StackPanel>
@@ -46,7 +48,7 @@
                 </Grid>
             </Border>
             <Border
-                Width="375"
+                Width="350"
                 Height="200"
                 Margin="5,5,0,0">
                 <Border.Background>
@@ -59,7 +61,7 @@
                     <RectangleGeometry
                         RadiusX="10"
                         RadiusY="10"
-                        Rect="0, 0, 375, 200" />
+                        Rect="0, 0, 350, 200" />
                 </Border.Clip>
                 <Grid>
                     <StackPanel>
@@ -77,18 +79,22 @@
             </Border>
 
         </StackPanel>
-        <StackPanel Margin="10,0,0,0" Orientation="Horizontal">
+        <StackPanel
+            Height="90"
+            Margin="10,0,0,0"
+            Orientation="Horizontal">
             <Border
                 Width="100"
                 Height="70"
                 HorizontalAlignment="Left"
-                CornerRadius="20">
+                Background="#1fa8d1"
+                CornerRadius="10">
                 <Button
                     Name="LoginButton"
+                    BorderThickness="0"
                     Width="100"
                     Height="70"
-                    Background="#1fa8d1"
-                    
+                    Background="Transparent"
                     Content="Login"
                     FontSize="30" />
             </Border>
@@ -121,6 +127,22 @@
                         Text="" />
                 </Grid>
             </Border>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock
+                Height="100"
+                Margin="0,30,0,0"
+                VerticalAlignment="Center"
+                FontSize="26"
+                Foreground="White"
+                Text="Staus: " />
+            <TextBlock
+                Height="100"
+                Margin="0,30,0,0"
+                VerticalAlignment="Center"
+                FontSize="26"
+                Foreground="White"
+                Text="text not set yet " />
         </StackPanel>
     </StackPanel>
 </UserControl>

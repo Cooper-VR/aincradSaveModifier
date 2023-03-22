@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using aincradSaveModifier.MVVM.View;
+using Newtonsoft.Json;
 using System;
 using System.IO;
 using System.Windows;
@@ -17,18 +18,17 @@ namespace aincradSaveModifier
 		{
 			InitializeComponent();
 
-			/*
+			
 			//calls the function to get the path of the folder where the file is in
 			string path = this.getPath();
-			this.path.Text = path;
 
 			//completes the path for the json files
 			this.stats = path + "\\avtr_5def9d3c-c59e-4b77-91fd-c7b23323db58";
 			this.inventory = path + "\\avtr_73e1a1b0-d9b9-4dc4-9544-5dae72ea8e64";
-		*/
+		
 		}
 
-		/*
+		
 		#region private helpers
 		/// <summary>
 		/// turns json data into a dictionary, works with any file type as long as its in json format, returns the json data in a dictionary format
@@ -265,8 +265,10 @@ namespace aincradSaveModifier
 		/// <param name="e"></param>
 		private void GetData(object sender, RoutedEventArgs e)
 		{
-			//gets all the data I might need including old data
-			double[] statData = new double[16];
+            StatsView statsView = new StatsView();
+			InventoryView inventoryView = new InventoryView();
+            //gets all the data I might need including old data
+            double[] statData = new double[16];
 			double[] stats = jsonStrip(jsonDecompile(this.stats));
 
 			double[] inventoryData = new double[16];
@@ -274,9 +276,9 @@ namespace aincradSaveModifier
 
 			#region set stats
 			statData[0] = stats[0];
-			stats[1] = ((double)this.exp.Value) / (double)65536;
-			stats[2] = ((double)this.health.Value) / (double)256;
-			stats[3] = ((double)this.col.Value) / (double)65536;
+			stats[1] = ((double)statsView.exp.Value) / (double)65536;
+			stats[2] = ((double)statsView.health.Value) / (double)256;
+			stats[3] = ((double)statsView.col.Value) / (double)65536;
 			stats[4] = stats[4];
 			stats[5] = stats[5];
 			stats[6] = stats[6];
@@ -287,7 +289,7 @@ namespace aincradSaveModifier
 			for (int i = 0; i < 7; i++)
 			{
 				string elementName = "item" + i.ToString();
-				var currentElement = this.FindName(elementName) as System.Windows.Controls.ListBox;
+				var currentElement = inventoryView.FindName(elementName) as System.Windows.Controls.ListBox;
 				var selectedElement = currentElement.SelectedItem as ListBoxItem;
 				string elementContent = selectedElement.Content.ToString();
 
@@ -324,6 +326,6 @@ namespace aincradSaveModifier
 
 			#endregion
 		}
-		#endregion */
+		#endregion 
 	}
 }

@@ -22,7 +22,7 @@
             </Setter>
             <Setter Property="Background" Value="Transparent" />
             <Setter Property="BorderThickness" Value="0" />
-            <Setter Property="FontFamily" Value="/Fonts/#SAO UI TT"/>
+            <Setter Property="FontFamily" Value="/Fonts/#SAO UI TT" />
         </Style.Setters>
         <Style.Triggers>
             <Trigger Property="IsChecked" Value="True">

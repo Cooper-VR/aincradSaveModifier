@@ -61,18 +61,27 @@
                     Foreground="White"
                     Style="{StaticResource MenuButtonTheme}" />
             </StackPanel>
-            <TextBox
+            <Border
                 Grid.Column="1"
                 Width="250"
                 Height="40"
                 Margin="5"
                 HorizontalAlignment="Left"
-                VerticalContentAlignment="Center"
-                Style="{StaticResource ModernTextBox}" />
+                Background="#333540"
+                CornerRadius="10">
+                <Button
+                    Height="40"
+                    VerticalAlignment="Center"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Click="GetData"
+                    Content="Set Paremeters"
+                    FontSize="20"
+                    Foreground="White" />
+            </Border>
             <ContentControl
                 Grid.Row="1"
                 Grid.Column="1"
-                Margin="10"
                 Content="{Binding CurrentView}" />
         </Grid>
     </Border>
