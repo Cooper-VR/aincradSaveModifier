@@ -12,10 +12,8 @@
     AllowsTransparency="True"
     Background="Transparent"
     ResizeMode="NoResize"
+    WindowStyle="none"
     mc:Ignorable="d">
-    <Window.Resources>
-        <FontFamily x:Key="CustomFont">/YourProjectName;component/Fonts/YourFontName.ttf#Your Font Name</FontFamily>
-    </Window.Resources>
     <Window.DataContext>
         <viewModel:MainViewModel />
     </Window.DataContext>
@@ -33,7 +31,7 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 FontFamily="/Fonts/#SAO UI TT"
-                    FontSize="28"
+                FontSize="28"
                 Foreground="White"
                 Text="Save Modder" />
             <StackPanel Grid.Row="1">
@@ -48,7 +46,7 @@
                     Style="{StaticResource MenuButtonTheme}" />
                 <RadioButton
                     Height="50"
-                    Command="{Binding DiscoveryViewCommand}"
+                    Command="{Binding StatsViewCommand}"
                     Content="Stats"
                     FontFamily="/Fonts/#SAO UI TT"
                     FontSize="24"
@@ -56,6 +54,7 @@
                     Style="{StaticResource MenuButtonTheme}" />
                 <RadioButton
                     Height="50"
+                    Command="{Binding InventoryViewCommand}"
                     Content="Inventory"
                     FontFamily="/Fonts/#SAO UI TT"
                     FontSize="24"

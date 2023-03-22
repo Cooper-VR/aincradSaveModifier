@@ -14,6 +14,7 @@
                             <TextBlock
                                 Margin="50,0,0,0"
                                 VerticalAlignment="Center"
+                                FontFamily="/Fonts/#SAO UI TT"
                                 Text="{TemplateBinding Property=Content}" />
                         </Grid>
                     </ControlTemplate>
@@ -21,6 +22,7 @@
             </Setter>
             <Setter Property="Background" Value="Transparent" />
             <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="FontFamily" Value="/Fonts/#SAO UI TT"/>
         </Style.Setters>
         <Style.Triggers>
             <Trigger Property="IsChecked" Value="True">

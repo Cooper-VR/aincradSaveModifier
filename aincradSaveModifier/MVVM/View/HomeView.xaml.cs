@@ -22,7 +22,7 @@ namespace aincradSaveModifier.MVVM.View
     {
         public HomeView()
         {
-            
+            InitializeComponent();
         }
     }
 }
