@@ -303,7 +303,7 @@ namespace aincradSaveModifier
 			}
 
 			int currentIndex = 0;
-			for (int i = 8; i < 15; i++)
+			for (int i = 8; i < 16; i++)
 			{
 				string elementName = "weapons" + currentIndex.ToString();
 				var currentElement = this.FindName(elementName) as System.Windows.Controls.ListBox;
