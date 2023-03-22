@@ -21,9 +21,10 @@
             </Grid.RowDefinitions>
             <TextBlock
                 Grid.Row="0"
-                FontSize="20"
+                FontFamily="/Fonts/#SAO UI TT"
+                FontSize="24"
                 Foreground="White"
-                Text="experence 0-65536"
+                Text="Experence 0-65536"
                 TextAlignment="Center" />
             <Slider
                 Name="exp"
@@ -36,7 +37,8 @@
                 TickPlacement="Both" />
             <TextBlock
                 Grid.Row="1"
-                FontSize="20"
+                FontFamily="/Fonts/#SAO UI TT"
+                FontSize="24"
                 Foreground="White"
                 Text="Health"
                 TextAlignment="Center" />
@@ -50,7 +52,8 @@
                 TickPlacement="Both" />
             <TextBlock
                 Grid.Row="2"
-                FontSize="20"
+                FontFamily="/Fonts/#SAO UI TT"
+                FontSize="24"
                 Foreground="White"
                 Text="Col"
                 TextAlignment="Center" />

@@ -1,7 +1,9 @@
 ﻿using aincradSaveModifier.MVVM.View;
+using aincradSaveModifier.MVVM.ViewModel;
 using Newtonsoft.Json;
 using System;
 using System.IO;
+using System.Security.Cryptography.X509Certificates;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Forms;
@@ -25,7 +27,6 @@ namespace aincradSaveModifier
 			//completes the path for the json files
 			this.stats = path + "\\avtr_5def9d3c-c59e-4b77-91fd-c7b23323db58";
 			this.inventory = path + "\\avtr_73e1a1b0-d9b9-4dc4-9544-5dae72ea8e64";
-		
 		}
 
 		
@@ -265,8 +266,6 @@ namespace aincradSaveModifier
 		/// <param name="e"></param>
 		private void GetData(object sender, RoutedEventArgs e)
 		{
-            StatsView statsView = new StatsView();
-			InventoryView inventoryView = new InventoryView();
             //gets all the data I might need including old data
             double[] statData = new double[16];
 			double[] stats = jsonStrip(jsonDecompile(this.stats));
@@ -276,9 +275,9 @@ namespace aincradSaveModifier
 
 			#region set stats
 			statData[0] = stats[0];
-			stats[1] = ((double)statsView.exp.Value) / (double)65536;
-			stats[2] = ((double)statsView.health.Value) / (double)256;
-			stats[3] = ((double)statsView.col.Value) / (double)65536;
+			stats[1] = ((double)this.exp.Value) / (double)65536;
+			stats[2] = ((double)this.health.Value) / (double)256;
+			stats[3] = ((double)this.col.Value) / (double)65536;
 			stats[4] = stats[4];
 			stats[5] = stats[5];
 			stats[6] = stats[6];
@@ -286,23 +285,25 @@ namespace aincradSaveModifier
 
 			#region set inventory
 			
-			for (int i = 0; i < 7; i++)
+			for (int i = 0; i < 8; i++)
 			{
 				string elementName = "item" + i.ToString();
-				var currentElement = inventoryView.FindName(elementName) as System.Windows.Controls.ListBox;
-				var selectedElement = currentElement.SelectedItem as ListBoxItem;
+
+				var listBox = this.FindName(elementName) as System.Windows.Controls.ListBox;
+				var selectedElement = listBox.SelectedItem as System.Windows.Controls.ListBoxItem;
 				string elementContent = selectedElement.Content.ToString();
 
 				string amountName = "slot" + i.ToString() + "Amount";
 				var currentAmountElement = this.FindName(amountName) as System.Windows.Controls.TextBox;
+				string amount = currentAmountElement.Text.ToString();
 				int currentAmount;
-				int.TryParse(currentAmountElement.Text, out currentAmount);
+				int.TryParse(amount, out currentAmount);
 
 				inventoryData[i] = itemValue(elementContent, currentAmount);
 			}
 
 			int currentIndex = 0;
-			for (int i = 7; i < 15; i++)
+			for (int i = 8; i < 15; i++)
 			{
 				string elementName = "weapons" + currentIndex.ToString();
 				var currentElement = this.FindName(elementName) as System.Windows.Controls.ListBox;
@@ -323,9 +324,69 @@ namespace aincradSaveModifier
 					currentIndex++;
 				}
 			}
-
 			#endregion
 		}
-		#endregion 
-	}
+
+
+		/// <summary>
+		/// this switches the view by changing visibility
+		/// </summary>
+        public void ViewSwitch()
+        {
+			if (this.HomeButton.IsChecked== true)
+			{
+				this.InventoryWindow.Visibility  = Visibility.Hidden;
+				this.StatsWindow.Visibility = Visibility.Hidden;
+				this.LoginWindow.Visibility = Visibility.Visible;
+            } else if (this.StatsButton.IsChecked == true) 
+			{
+				this.LoginWindow.Visibility = Visibility.Hidden;
+                this.InventoryWindow.Visibility = Visibility.Hidden;
+				this.StatsWindow.Visibility = Visibility.Visible;
+            } else if (InventoryButton.IsChecked == true)
+			{
+				this.LoginWindow.Visibility = Visibility.Hidden;
+                this.StatsWindow.Visibility = Visibility.Hidden;
+				this.InventoryWindow.Visibility = Visibility.Visible;
+            } else
+			{
+				this.HomeButton.IsChecked = true;
+			}
+        } 
+
+		/// <summary>
+		/// for when view is to be switched
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void InventoryPressed(object sender, RoutedEventArgs e)
+        {
+			ViewSwitch();
+        }
+
+        /// <summary>
+        /// for when view is to be switched
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void HomePressed(object sender, RoutedEventArgs e)
+        {
+            ViewSwitch();
+        }
+
+        /// <summary>
+        /// for when view is to be switched
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void StatsPressed(object sender, RoutedEventArgs e)
+        {
+            ViewSwitch();
+        }
+        #endregion
+
+       
+
+       
+    }
 }

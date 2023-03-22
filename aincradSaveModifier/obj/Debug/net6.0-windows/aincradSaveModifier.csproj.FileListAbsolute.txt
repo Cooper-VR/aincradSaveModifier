@@ -54,8 +54,6 @@ C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\obj
 C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\Theme\TextBoxTheme.baml
 C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\App.baml
 C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
-C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\MVVM\View\DiscoveryView.g.cs
-C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\MVVM\View\DiscoveryView.baml
 C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\bin\Debug\net6.0-windows\JsonSubTypes.dll
 C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\bin\Debug\net6.0-windows\Polly.dll
 C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\bin\Debug\net6.0-windows\RestSharp.dll
@@ -100,3 +98,9 @@ D:\cooper bower\3d stuff\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debu
 D:\cooper bower\3d stuff\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\MVVM\View\StatsView.baml
 D:\cooper bower\3d stuff\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\MVVM\View\InventoryView.g.cs
 D:\cooper bower\3d stuff\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\MVVM\View\InventoryView.baml
+C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\MVVM\View\HomeView.g.cs
+C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\MVVM\View\InventoryView.g.cs
+C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\MVVM\View\StatsView.g.cs
+C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\MVVM\View\HomeView.baml
+C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\MVVM\View\InventoryView.baml
+C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\MVVM\View\StatsView.baml

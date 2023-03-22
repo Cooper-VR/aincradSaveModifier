@@ -9,178 +9,1946 @@
     d:DesignWidth="720"
     Background="#1B1B1B"
     mc:Ignorable="d">
-    <StackPanel Orientation="Horizontal">
-        <StackPanel Width="320" Margin="40, 0, 0,0">
-            <StackPanel Height="150" Orientation="Horizontal">
-                <ListBox
-                    Name="item0"
-                    Width="170"
-                    Background="Transparent"
-                    Foreground="White"
-                    HorizontalAlignment="Left">
-                    <ListBoxItem Background="#093A4C" Content="teleport" />
-                    <ListBoxItem Background="#093A4C" Content="mirror" />
-                    <ListBoxItem Background="#093A4C" Content="healing crystal" />
-                    <ListBoxItem Background="#093A4C" Content="curing crystal" />
-                    <ListBoxItem Background="#093A4C" Content="potion" />
-                    <ListBoxItem Background="#093A4C" Content="firework" />
-                    <ListBoxItem Background="#093A4C" Content="punpkin" />
-                </ListBox>
-                <TextBox
-                    Name="slot0Amount"
-                    Width="115"
-                    VerticalAlignment="Center"
-                    Height="126"
-                    Margin="20, 0, 0, 0"
-                    FontSize="30"
-                    BorderThickness="0"
-                    Background="Transparent"
-                    Foreground="White"
-                    Text="Amount"
-                    TextAlignment="Center" />
+    <ScrollViewer>
+        <StackPanel>
+            <TextBlock
+                HorizontalAlignment="Center"
+                FontFamily="/Fonts/#SAO UI TT"
+                FontSize="28"
+                Foreground="White"
+                Text="Items"
+                TextAlignment="Center" />
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Width="320" Margin="40,0,0,0">
+                    <StackPanel Height="150" Orientation="Horizontal">
+                        <ListBox
+                            Name="item0"
+                            Width="170"
+                            HorizontalAlignment="Left"
+                            Background="Transparent"
+                            Foreground="White">
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="teleport"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="mirror"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="healing crystal"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="curing crystal"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="potion"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="firework"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="punpkin"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                        </ListBox>
+                        <TextBox
+                            Name="slot0Amount"
+                            Width="115"
+                            Height="126"
+                            Margin="20,0,0,0"
+                            VerticalAlignment="Center"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="34"
+                            Foreground="White"
+                            Text="Amount"
+                            TextAlignment="Center" />
+                    </StackPanel>
+                    <StackPanel Height="150" Orientation="Horizontal">
+                        <ListBox
+                            Name="item1"
+                            Width="170"
+                            HorizontalAlignment="Left"
+                            Background="Transparent"
+                            Foreground="White">
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="teleport"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="mirror"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="healing crystal"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="curing crystal"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="potion"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="firework"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="punpkin"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                        </ListBox>
+                        <TextBox
+                            Name="slot1Amount"
+                            Width="115"
+                            Height="126"
+                            Margin="20,0,0,0"
+                            VerticalAlignment="Center"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="34"
+                            Foreground="White"
+                            Text="Amount"
+                            TextAlignment="Center" />
+                    </StackPanel>
+                    <StackPanel Height="150" Orientation="Horizontal">
+                        <ListBox
+                            Name="item2"
+                            Width="170"
+                            HorizontalAlignment="Left"
+                            Background="Transparent"
+                            Foreground="White">
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="teleport"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="mirror"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="healing crystal"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="curing crystal"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="potion"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="firework"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="punpkin"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                        </ListBox>
+                        <TextBox
+                            Name="slot2Amount"
+                            Width="115"
+                            Height="126"
+                            Margin="20,0,0,0"
+                            VerticalAlignment="Center"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="34"
+                            Foreground="White"
+                            Text="Amount"
+                            TextAlignment="Center" />
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Width="320">
+                    <StackPanel Height="150" Orientation="Horizontal">
+                        <ListBox
+                            Name="item3"
+                            Width="170"
+                            HorizontalAlignment="Left"
+                            Background="Transparent"
+                            Foreground="White">
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="teleport"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="mirror"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="healing crystal"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="curing crystal"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="potion"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="firework"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="punpkin"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                        </ListBox>
+                        <TextBox
+                            Name="slot3Amount"
+                            Width="115"
+                            Height="126"
+                            Margin="20,0,0,0"
+                            VerticalAlignment="Center"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="34"
+                            Foreground="White"
+                            Text="Amount"
+                            TextAlignment="Center" />
+                    </StackPanel>
+                    <StackPanel Height="150" Orientation="Horizontal">
+                        <ListBox
+                            Name="item4"
+                            Width="170"
+                            HorizontalAlignment="Left"
+                            Background="Transparent"
+                            Foreground="White">
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="teleport"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="mirror"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="healing crystal"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="curing crystal"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="potion"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="firework"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="punpkin"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                        </ListBox>
+                        <TextBox
+                            Name="slot4Amount"
+                            Width="115"
+                            Height="126"
+                            Margin="20,0,0,0"
+                            VerticalAlignment="Center"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="34"
+                            Foreground="White"
+                            Text="Amount"
+                            TextAlignment="Center" />
+                    </StackPanel>
+                    <StackPanel Height="150" Orientation="Horizontal">
+                        <ListBox
+                            Name="item5"
+                            Width="170"
+                            HorizontalAlignment="Left"
+                            Background="Transparent"
+                            Foreground="White">
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="teleport"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="mirror"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="healing crystal"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="curing crystal"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="potion"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="firework"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                            <ListBoxItem
+                                Background="#093A4C"
+                                Content="punpkin"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="14" />
+                        </ListBox>
+                        <TextBox
+                            Name="slot5Amount"
+                            Width="115"
+                            Height="126"
+                            Margin="20,0,0,0"
+                            VerticalAlignment="Center"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="34"
+                            Foreground="White"
+                            Text="Amount"
+                            TextAlignment="Center" />
+                    </StackPanel>
+                </StackPanel>
             </StackPanel>
-            <StackPanel Height="150" Orientation="Horizontal">
-                <ListBox
-                    Name="item1"
-                    Width="170"
-                    Background="Transparent"
-                    Foreground="White"
-                    HorizontalAlignment="Left">
-                    <ListBoxItem Background="#093A4C" Content="teleport" />
-                    <ListBoxItem Background="#093A4C" Content="mirror" />
-                    <ListBoxItem Background="#093A4C" Content="healing crystal" />
-                    <ListBoxItem Background="#093A4C" Content="curing crystal" />
-                    <ListBoxItem Background="#093A4C" Content="potion" />
-                    <ListBoxItem Background="#093A4C" Content="firework" />
-                    <ListBoxItem Background="#093A4C" Content="punpkin" />
-                </ListBox>
-                <TextBox
-                    Name="slot1Amount"
-                    Width="115"
-                    VerticalAlignment="Center"
-                    Height="126"
-                    Margin="20, 0, 0, 0"
-                    FontSize="30"
-                    BorderThickness="0"
-                    Background="Transparent"
-                    Foreground="White"
-                    Text="Amount"
-                    TextAlignment="Center" />
-            </StackPanel>
-            <StackPanel Height="150" Orientation="Horizontal">
-                <ListBox
-                    Name="item2"
-                    Width="170"
-                    Background="Transparent"
-                    Foreground="White"
-                    HorizontalAlignment="Left">
-                    <ListBoxItem Background="#093A4C" Content="teleport" />
-                    <ListBoxItem Background="#093A4C" Content="mirror" />
-                    <ListBoxItem Background="#093A4C" Content="healing crystal" />
-                    <ListBoxItem Background="#093A4C" Content="curing crystal" />
-                    <ListBoxItem Background="#093A4C" Content="potion" />
-                    <ListBoxItem Background="#093A4C" Content="firework" />
-                    <ListBoxItem Background="#093A4C" Content="punpkin" />
-                </ListBox>
-                <TextBox
-                    Name="slot2Amount"
-                    Width="115"
-                    VerticalAlignment="Center"
-                    Height="126"
-                    Margin="20, 0, 0, 0"
-                    FontSize="30"
-                    BorderThickness="0"
-                    Background="Transparent"
-                    Foreground="White"
-                    Text="Amount"
-                    TextAlignment="Center" />
+            <TextBlock
+                HorizontalAlignment="Center"
+                FontSize="28"
+                Foreground="White"
+                Text="Weapons"
+                TextAlignment="Center" />
+            <StackPanel Height="450" Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <ListBox
+                        Name="weapons0"
+                        Width="235"
+                        Height="150"
+                        Margin="2,0,2,0"
+                        HorizontalAlignment="Left"
+                        Background="Transparent"
+                        Foreground="White">
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="black great sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="dark repulser"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="wooden sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="excalibur"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="excalibur pf"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="blue long sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="ground gorge"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="prometheus wrath"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="vespid rapier"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="blood thorn"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="divine blade"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="dragon slayer"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="iron katana"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="iron sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="iron spear"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="steel sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="abyssal cleaver"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="carrot claymore"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="carrot clunker"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="carrot impaler"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="cocoa clash"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="cocoa Stream"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="cocoa Thunder"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="rageout Rage"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="rageout Ripper"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="witch Broom"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="were Tears"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="soul Chiller"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="grave Dagger"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="monster Masher"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="elucidator"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="lampentLight"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronzeDagger"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze Greataxe"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze GreatSword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze Mace"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze Rapiar"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze Spear"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze Sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="quartanier"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="iron Axe"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="Axemas"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="Blittzard"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                    </ListBox>
+                    <ListBox
+                        Name="weapons1"
+                        Width="235"
+                        Height="150"
+                        Margin="2,0,2,0"
+                        HorizontalAlignment="Left"
+                        Background="Transparent"
+                        Foreground="White">
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="black great sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="dark repulser"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="wooden sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="excalibur"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="excalibur pf"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="blue long sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="ground gorge"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="prometheus wrath"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="vespid rapier"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="blood thorn"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="divine blade"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="dragon slayer"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="iron katana"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="iron sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="iron spear"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="steel sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="abyssal cleaver"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="carrot claymore"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="carrot clunker"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="carrot impaler"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="cocoa clash"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="cocoa Stream"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="cocoa Thunder"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="rageout Rage"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="rageout Ripper"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="witch Broom"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="were Tears"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="soul Chiller"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="grave Dagger"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="monster Masher"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="elucidator"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="lampentLight"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronzeDagger"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze Greataxe"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze GreatSword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze Mace"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze Rapiar"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze Spear"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze Sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="quartanier"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="iron Axe"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="Axemas"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="Blittzard"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                    </ListBox>
+                    <ListBox
+                        Name="weapons2"
+                        Width="235"
+                        Height="150"
+                        Margin="2,0,2,0"
+                        HorizontalAlignment="Left"
+                        Background="Transparent"
+                        Foreground="White">
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="black great sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="dark repulser"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="wooden sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="excalibur"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="excalibur pf"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="blue long sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="ground gorge"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="prometheus wrath"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="vespid rapier"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="blood thorn"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="divine blade"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="dragon slayer"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="iron katana"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="iron sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="iron spear"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="steel sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="abyssal cleaver"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="carrot claymore"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="carrot clunker"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="carrot impaler"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="cocoa clash"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="cocoa Stream"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="cocoa Thunder"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="rageout Rage"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="rageout Ripper"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="witch Broom"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="were Tears"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="soul Chiller"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="grave Dagger"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="monster Masher"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="elucidator"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="lampentLight"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronzeDagger"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze Greataxe"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze GreatSword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze Mace"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze Rapiar"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze Spear"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze Sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="quartanier"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="iron Axe"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="Axemas"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="Blittzard"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                    </ListBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <ListBox
+                        Name="weapons3"
+                        Width="235"
+                        Height="150"
+                        Margin="2,0,2,0"
+                        HorizontalAlignment="Left"
+                        Background="Transparent"
+                        Foreground="White">
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="black great sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="dark repulser"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="wooden sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="excalibur"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="excalibur pf"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="blue long sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="ground gorge"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="prometheus wrath"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="vespid rapier"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="blood thorn"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="divine blade"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="dragon slayer"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="iron katana"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="iron sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="iron spear"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="steel sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="abyssal cleaver"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="carrot claymore"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="carrot clunker"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="carrot impaler"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="cocoa clash"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="cocoa Stream"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="cocoa Thunder"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="rageout Rage"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="rageout Ripper"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="witch Broom"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="were Tears"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="soul Chiller"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="grave Dagger"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="monster Masher"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="elucidator"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="lampentLight"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronzeDagger"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze Greataxe"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze GreatSword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze Mace"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze Rapiar"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze Spear"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze Sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="quartanier"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="iron Axe"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="Axemas"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="Blittzard"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                    </ListBox>
+                    <ListBox
+                        Name="weapons4"
+                        Width="235"
+                        Height="150"
+                        Margin="2,0,2,0"
+                        HorizontalAlignment="Left"
+                        Background="Transparent"
+                        Foreground="White">
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="black great sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="dark repulser"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="wooden sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="excalibur"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="excalibur pf"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="blue long sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="ground gorge"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="prometheus wrath"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="vespid rapier"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="blood thorn"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="divine blade"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="dragon slayer"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="iron katana"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="iron sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="iron spear"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="steel sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="abyssal cleaver"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="carrot claymore"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="carrot clunker"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="carrot impaler"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="cocoa clash"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="cocoa Stream"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="cocoa Thunder"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="rageout Rage"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="rageout Ripper"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="witch Broom"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="were Tears"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="soul Chiller"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="grave Dagger"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="monster Masher"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="elucidator"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="lampentLight"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronzeDagger"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze Greataxe"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze GreatSword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze Mace"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze Rapiar"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze Spear"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze Sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="quartanier"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="iron Axe"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="Axemas"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="Blittzard"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                    </ListBox>
+                    <ListBox
+                        Name="weapons5"
+                        Width="235"
+                        Height="150"
+                        Margin="2,0,2,0"
+                        HorizontalAlignment="Left"
+                        Background="Transparent"
+                        Foreground="White">
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="black great sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="dark repulser"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="wooden sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="excalibur"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="excalibur pf"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="blue long sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="ground gorge"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="prometheus wrath"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="vespid rapier"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="blood thorn"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="divine blade"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="dragon slayer"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="iron katana"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="iron sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="iron spear"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="steel sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="abyssal cleaver"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="carrot claymore"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="carrot clunker"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="carrot impaler"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="cocoa clash"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="cocoa Stream"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="cocoa Thunder"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="rageout Rage"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="rageout Ripper"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="witch Broom"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="were Tears"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="soul Chiller"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="grave Dagger"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="monster Masher"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="elucidator"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="lampentLight"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronzeDagger"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze Greataxe"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze GreatSword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze Mace"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze Rapiar"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze Spear"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze Sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="quartanier"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="iron Axe"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="Axemas"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="Blittzard"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                    </ListBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <ListBox
+                        Name="weapons6"
+                        Width="235"
+                        Height="150"
+                        Margin="2,0,2,0"
+                        HorizontalAlignment="Left"
+                        Background="Transparent"
+                        Foreground="White">
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="black great sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="dark repulser"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="wooden sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="excalibur"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="excalibur pf"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="blue long sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="ground gorge"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="prometheus wrath"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="vespid rapier"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="blood thorn"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="divine blade"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="dragon slayer"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="iron katana"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="iron sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="iron spear"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="steel sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="abyssal cleaver"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="carrot claymore"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="carrot clunker"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="carrot impaler"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="cocoa clash"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="cocoa Stream"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="cocoa Thunder"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="rageout Rage"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="rageout Ripper"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="witch Broom"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="were Tears"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="soul Chiller"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="grave Dagger"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="monster Masher"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="elucidator"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="lampentLight"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronzeDagger"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze Greataxe"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze GreatSword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze Mace"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze Rapiar"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze Spear"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="bronze Sword"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="quartanier"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="iron Axe"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="Axemas"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                        <ListBoxItem
+                            Background="#093A4C"
+                            Content="Blittzard"
+                            FontFamily="/Fonts/#SAO UI TT"
+                            FontSize="14" />
+                    </ListBox>
+
+                </StackPanel>
             </StackPanel>
         </StackPanel>
-        <StackPanel Width="320">
-            <StackPanel Height="150" Orientation="Horizontal">
-                <ListBox
-                    Name="item3"
-                    Width="170"
-                    Background="Transparent"
-                    Foreground="White"
-                    HorizontalAlignment="Left">
-                    <ListBoxItem Background="#093A4C" Content="teleport" />
-                    <ListBoxItem Background="#093A4C" Content="mirror" />
-                    <ListBoxItem Background="#093A4C" Content="healing crystal" />
-                    <ListBoxItem Background="#093A4C" Content="curing crystal" />
-                    <ListBoxItem Background="#093A4C" Content="potion" />
-                    <ListBoxItem Background="#093A4C" Content="firework" />
-                    <ListBoxItem Background="#093A4C" Content="punpkin" />
-                </ListBox>
-                <TextBox
-                    Name="slot3Amount"
-                    Width="115"
-                    VerticalAlignment="Center"
-                    Height="126"
-                    Margin="20, 0, 0, 0"
-                    FontSize="30"
-                    BorderThickness="0"
-                    Background="Transparent"
-                    Foreground="White"
-                    Text="Amount"
-                    TextAlignment="Center" />
-            </StackPanel>
-            <StackPanel Height="150" Orientation="Horizontal">
-                <ListBox
-                    Name="item4"
-                    Width="170"
-                    Background="Transparent"
-                    Foreground="White"
-                    HorizontalAlignment="Left">
-                    <ListBoxItem Background="#093A4C" Content="teleport" />
-                    <ListBoxItem Background="#093A4C" Content="mirror" />
-                    <ListBoxItem Background="#093A4C" Content="healing crystal" />
-                    <ListBoxItem Background="#093A4C" Content="curing crystal" />
-                    <ListBoxItem Background="#093A4C" Content="potion" />
-                    <ListBoxItem Background="#093A4C" Content="firework" />
-                    <ListBoxItem Background="#093A4C" Content="punpkin" />
-                </ListBox>
-                <TextBox
-                    Name="slot4Amount"
-                   Width="115"
-                    VerticalAlignment="Center"
-                    Height="126"
-                    Margin="20, 0, 0, 0"
-                    FontSize="30"
-                    BorderThickness="0"
-                    Background="Transparent"
-                    Foreground="White"
-                    Text="Amount"
-                    TextAlignment="Center" />
-            </StackPanel>
-            <StackPanel Height="150" Orientation="Horizontal">
-                <ListBox
-                    Name="item5"
-                    Width="170"
-                    Background="Transparent"
-                    Foreground="White"
-                    HorizontalAlignment="Left">
-                    <ListBoxItem Background="#093A4C" Content="teleport" />
-                    <ListBoxItem Background="#093A4C" Content="mirror" />
-                    <ListBoxItem Background="#093A4C" Content="healing crystal" />
-                    <ListBoxItem Background="#093A4C" Content="curing crystal" />
-                    <ListBoxItem Background="#093A4C" Content="potion" />
-                    <ListBoxItem Background="#093A4C" Content="firework" />
-                    <ListBoxItem Background="#093A4C" Content="punpkin" />
-                </ListBox>
-                <TextBox
-                    Name="slot5Amount"
-                   Width="115"
-                    VerticalAlignment="Center"
-                    Height="126"
-                    Margin="20, 0, 0, 0"
-                    FontSize="30"
-                    BorderThickness="0"
-                    Background="Transparent"
-                    Foreground="White"
-                    Text="Amount"
-                    TextAlignment="Center" />
-            </StackPanel>
-        </StackPanel>
-    </StackPanel>
+    </ScrollViewer>
 </UserControl>
