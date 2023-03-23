@@ -2,6 +2,7 @@
 using aincradSaveModifier.MVVM.ViewModel;
 using Newtonsoft.Json;
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.Security.Cryptography.X509Certificates;
 using System.Windows;
@@ -16,6 +17,7 @@ namespace aincradSaveModifier
 		#region script-wide variables
 		private string stats;
 		private string inventory;
+		private string path;
 		#endregion
 		public MainWindow()
 		{
@@ -23,11 +25,16 @@ namespace aincradSaveModifier
 
 			
 			//calls the function to get the path of the folder where the file is in
-			string path = this.getPath();
+			this.path = this.getPath();
+
+			if (path != null )
+			{
+                this.stats = path + "\\avtr_5def9d3c-c59e-4b77-91fd-c7b23323db58";
+                this.inventory = path + "\\avtr_73e1a1b0-d9b9-4dc4-9544-5dae72ea8e64";
+            }
 
 			//completes the path for the json files
-			this.stats = path + "\\avtr_5def9d3c-c59e-4b77-91fd-c7b23323db58";
-			this.inventory = path + "\\avtr_73e1a1b0-d9b9-4dc4-9544-5dae72ea8e64";
+			
 		}
 
 		
@@ -267,12 +274,24 @@ namespace aincradSaveModifier
 		/// <param name="e"></param>
 		private void GetData(object sender, RoutedEventArgs e)
 		{
+			
+			while (this.path == string.Empty)
+			{
+                this.path = this.getPath();
+
+                if (path != null)
+                {
+                    this.stats = path + "\\avtr_5def9d3c-c59e-4b77-91fd-c7b23323db58";
+                    this.inventory = path + "\\avtr_73e1a1b0-d9b9-4dc4-9544-5dae72ea8e64";
+                }
+            }
+
             //gets all the data I might need including old data
             double[] statData = new double[16];
 			double[] stats = jsonStrip(jsonDecompile(this.stats));
 
 			double[] inventoryData = new double[16];
-			double[] inventory = jsonStrip(jsonDecompile(this.stats));
+			double[] inventory = jsonStrip(jsonDecompile(this.inventory));
 
 			#region set stats
 			statData[0] = stats[0];
@@ -290,17 +309,57 @@ namespace aincradSaveModifier
 			{
 				string elementName = "item" + i.ToString();
 
-				var listBox = this.FindName(elementName) as System.Windows.Controls.ListBox;
-				var selectedElement = listBox.SelectedItem as System.Windows.Controls.ListBoxItem;
-				string elementContent = selectedElement.Content.ToString();
+				try
+				{
+					var listBox = this.FindName(elementName) as System.Windows.Controls.ListBox;
+					var selectedElement = listBox.SelectedItem as System.Windows.Controls.ListBoxItem;
+					string elementContent = selectedElement.Content.ToString();
 
-				string amountName = "slot" + i.ToString() + "Amount";
-				var currentAmountElement = this.FindName(amountName) as System.Windows.Controls.TextBox;
-				string amount = currentAmountElement.Text.ToString();
-				int currentAmount;
-				int.TryParse(amount, out currentAmount);
+					if (elementContent != "mirror")
+					{
+                        string amountName = "slot" + i.ToString() + "Amount";
+                        var currentAmountElement = this.FindName(amountName) as System.Windows.Controls.TextBox;
+                        string amount = currentAmountElement.Text.ToString();
+                        int currentAmount;
 
-				inventoryData[i] = itemValue(elementContent, currentAmount);
+                        if (int.TryParse(amount, out currentAmount) == false)
+                        {
+                            currentAmount = 1;
+                        }
+
+
+                        if (currentAmount < 0)
+                        {
+                            currentAmount = Math.Abs(currentAmount);
+                        }
+                        if (currentAmount > 64)
+                        {
+                            currentAmount = 64;
+                        }
+
+
+                        inventoryData[i] = itemValue(elementContent, currentAmount);
+					}
+					else
+					{
+                        string amountName = "slot" + i.ToString() + "Amount";
+                        var currentAmountElement = this.FindName(amountName) as System.Windows.Controls.TextBox;
+                        string amount = currentAmountElement.Text.ToString();
+                        int currentAmount;
+
+						currentAmount = 1;
+
+
+                        inventoryData[i] = itemValue(elementContent, currentAmount);
+                    }
+
+					
+				} catch (System.NullReferenceException ex)
+				{
+					Debug.WriteLine(ex.Message);
+					inventory[i] = 0;
+				}
+				
 			}
 
 			int currentIndex = 0;
@@ -387,7 +446,6 @@ namespace aincradSaveModifier
 
       
         #endregion
-
 
 
 

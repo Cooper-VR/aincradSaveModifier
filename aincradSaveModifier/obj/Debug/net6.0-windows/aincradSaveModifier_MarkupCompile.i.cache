@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\cooper bower\3d stuff\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\
+C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\obj\Debug\net6.0-windows\
 aincradSaveModifier
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-D:\cooper bower\3d stuff\gitHub\aincradSaveModifier\aincradSaveModifier\App.xaml
+C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\App.xaml
 6573327124
 
 14-1680434901
-2101723191958
+210-1004453633
 MainWindow.xaml;MVVM\View\HomeView.xaml;MVVM\View\InventoryView.xaml;MVVM\View\StatsView.xaml;Theme\MenuButtonTheme.xaml;Theme\TextBoxTheme.xaml;
 
 True
