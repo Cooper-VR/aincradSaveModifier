@@ -7,6 +7,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Forms;
+using System.Windows.Input;
 
 namespace aincradSaveModifier
 {
@@ -285,7 +286,7 @@ namespace aincradSaveModifier
 
 			#region set inventory
 			
-			for (int i = 0; i < 8; i++)
+			for (int i = 0; i < 7; i++)
 			{
 				string elementName = "item" + i.ToString();
 
@@ -303,7 +304,7 @@ namespace aincradSaveModifier
 			}
 
 			int currentIndex = 0;
-			for (int i = 8; i < 16; i++)
+			for (int i = 7; i < 16; i++)
 			{
 				string elementName = "weapons" + currentIndex.ToString();
 				var currentElement = this.FindName(elementName) as System.Windows.Controls.ListBox;
@@ -383,10 +384,12 @@ namespace aincradSaveModifier
         {
             ViewSwitch();
         }
+
+      
         #endregion
 
-       
 
-       
+
+
     }
 }
