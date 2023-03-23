@@ -117,9 +117,10 @@
                     <TextBlock
                         Margin="0,0,0,20"
                         HorizontalAlignment="Left"
-                        FontSize="28"
+                        FontFamily="/Fonts/#SAO UI TT"
+                        FontSize="36"
                         Foreground="White"
-                        Text="Login" />
+                        Text="File Manager" />
                     <StackPanel Orientation="Horizontal">
                         <Border
                             Width="350"
@@ -142,12 +143,16 @@
                                 <StackPanel>
                                     <TextBlock
                                         Margin="20,10,10,0"
-                                        FontSize="28"
+                                        FontFamily="/Fonts/#SAO UI TT"
+                                        FontSize="34"
                                         Foreground="White"
-                                        Text="UserName" />
-                                    <TextBox
+                                        Text="5def: " />
+                                    <TextBlock
+                                        Name="StatsStatus"
                                         Margin="20,10,10,0"
-                                        FontSize="18"
+                                        Background="White"
+                                        FontFamily="/Fonts/#SAO UI TT"
+                                        FontSize="22"
                                         Foreground="Black"
                                         Text="" />
                                 </StackPanel>
@@ -174,12 +179,16 @@
                                 <StackPanel>
                                     <TextBlock
                                         Margin="20,10,10,0"
-                                        FontSize="28"
+                                        FontFamily="/Fonts/#SAO UI TT"
+                                        FontSize="34"
                                         Foreground="White"
-                                        Text="Password" />
-                                    <PasswordBox
+                                        Text="73e:" />
+                                    <TextBlock
+                                        Name="InventoryStatus"
                                         Margin="20,10,10,0"
-                                        FontSize="18"
+                                        Background="White"
+                                        FontFamily="/Fonts/#SAO UI TT"
+                                        FontSize="22"
                                         Foreground="Black" />
                                 </StackPanel>
                             </Grid>
@@ -188,69 +197,46 @@
                     </StackPanel>
                     <StackPanel
                         Height="90"
-                        Margin="10,0,0,0"
+                        Margin="10,50,0,0"
                         Orientation="Horizontal">
                         <Border
-                            Width="100"
+                            Width="150"
                             Height="70"
                             HorizontalAlignment="Left"
                             Background="#1fa8d1"
                             CornerRadius="10">
                             <Button
-                                Name="LoginButton"
-                                Width="100"
+                                Click="FindFiles"
+                                Name="findPath"
+                                Width="150"
                                 Height="70"
                                 Background="Transparent"
                                 BorderThickness="0"
-                                Content="Login"
-                                FontSize="30" />
+                                Content="Find Files"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="34" />
                         </Border>
 
                         <Border
-                            Width="200"
-                            Height="40"
-                            Margin="30,0,0,0"
-                            Background="#333540"
+                            Width="225"
+                            Height="70"
+                            Margin="40,0,0,0"
+                            HorizontalAlignment="Left"
+                            Background="#1fa8d1"
                             CornerRadius="10">
-                            <Grid>
-                                <Rectangle StrokeThickness="1" />
-                                <TextBox
-                                    x:Name="SearchBox"
-                                    Height="30"
-                                    Margin="1"
-                                    Padding="5"
-                                    VerticalContentAlignment="Center"
-                                    Background="Transparent"
-                                    BorderThickness="0"
-                                    Foreground="#CFCFCF" />
-                                <TextBlock
-                                    Width="200"
-                                    Height="40"
-                                    HorizontalAlignment="Center"
-                                    VerticalAlignment="Center"
-                                    FontSize="11"
-                                    Foreground="DarkGray"
-                                    IsHitTestVisible="False"
-                                    Text="" />
-                            </Grid>
+                            <Button
+                                Name="saveCreation"
+                                Width="225"
+                                Click="CreateFiles"
+                                Height="70"
+                                Background="Transparent"
+                                BorderThickness="0"
+                                Content="Create New Files"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="34" />
                         </Border>
                     </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock
-                            Height="100"
-                            Margin="0,30,0,0"
-                            VerticalAlignment="Center"
-                            FontSize="26"
-                            Foreground="White"
-                            Text="Staus: " />
-                        <TextBlock
-                            Height="100"
-                            Margin="0,30,0,0"
-                            VerticalAlignment="Center"
-                            FontSize="26"
-                            Foreground="White"
-                            Text="text not set yet " />
-                    </StackPanel>
+
                 </StackPanel>
             </StackPanel>
             <StackPanel

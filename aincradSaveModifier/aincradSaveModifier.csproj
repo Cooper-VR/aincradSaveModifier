@@ -11,7 +11,11 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
-
+<ItemGroup>
+    <Resource Include="BaseData\avtr_5def9d3c-c59e-4b77-91fd-c7b23323db58" />
+    <Resource Include="BaseData\avtr_73e1a1b0-d9b9-4dc4-9544-5dae72ea8e64" />
+    <Resource Include="BaseData\savedPaths.txt" />
+  </ItemGroup>
 
 
   <ItemGroup>

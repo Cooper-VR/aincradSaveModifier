@@ -22,19 +22,6 @@ namespace aincradSaveModifier
 		public MainWindow()
 		{
 			InitializeComponent();
-
-			
-			//calls the function to get the path of the folder where the file is in
-			this.path = this.getPath();
-
-			if (path != null )
-			{
-                this.stats = path + "\\avtr_5def9d3c-c59e-4b77-91fd-c7b23323db58";
-                this.inventory = path + "\\avtr_73e1a1b0-d9b9-4dc4-9544-5dae72ea8e64";
-            }
-
-			//completes the path for the json files
-			
 		}
 
 		
@@ -444,7 +431,45 @@ namespace aincradSaveModifier
             ViewSwitch();
         }
 
-      
+		private void FindFiles(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void CreateFiles(object sender, RoutedEventArgs e)
+		{
+			string folderPath;
+			System.Windows.MessageBox.Show("go to vrchat local avatar data folder");
+            folderPath = getPath();
+
+			while (folderPath == string.Empty) 
+			{
+                System.Windows.MessageBox.Show("go to vrchat local avatar data folder");
+                folderPath = getPath();
+            }
+
+			try
+			{
+				File.Copy("BaseData\\avtr_5def9d3c-c59e-4b77-91fd-c7b23323db58", folderPath + "\\avtr_5def9d3c-c59e-4b77-91fd-c7b23323db58");
+                System.Windows.MessageBox.Show("Save File Created");
+            } catch (Exception ex)
+			{
+                System.Windows.MessageBox.Show("Save File NOT Created");
+            }
+
+            try
+            {
+                File.Copy("BaseData\\avtr_73e1a1b0-d9b9-4dc4-9544-5dae72ea8e64", folderPath + "\\avtr_73e1a1b0-d9b9-4dc4-9544-5dae72ea8e64");
+                System.Windows.MessageBox.Show("Save File Created");
+            }
+            catch (Exception ex)
+            {
+                System.Windows.MessageBox.Show("Save File NOT Created");
+            }
+
+
+
+        }
         #endregion
 
 
