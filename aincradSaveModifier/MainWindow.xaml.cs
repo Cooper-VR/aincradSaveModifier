@@ -9,6 +9,9 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Forms;
 using System.Windows.Input;
+using System.Windows.Media;
+using System.Collections.Generic;
+
 
 namespace aincradSaveModifier
 {
@@ -251,15 +254,65 @@ namespace aincradSaveModifier
 			}
 			#endregion
 		}
-		#endregion
 
-		#region button presses
 		/// <summary>
-		/// this will apply the setting the user has set to the correct numbers and write it to the files
+		/// this simply creates a listBoxItem with some styling
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		private void GetData(object sender, RoutedEventArgs e)
+		/// <param name="content"></param>
+		public void pathItemBox(string content)
+		{
+			var listBox = new System.Windows.Controls.ListBoxItem();
+
+			listBox.Background = (Brush)new BrushConverter().ConvertFrom("#001D2A");
+			listBox.BorderThickness = new Thickness(2);
+			listBox.Foreground = new SolidColorBrush(Colors.White);
+			listBox.Content = content;
+			listBox.FontFamily = new FontFamily("/Fonts/#SAO UI TT");
+			listBox.FontSize = 18;
+
+			this.userIDS.Items.Add(listBox);
+
+        }
+
+        public void checkPathFile()
+		{
+            string[] NewPathArray = File.ReadAllText("BaseData/savedPaths.txt").Split("$");
+
+            string[] array = { "apple", "banana", "cherry", "banana", "kiwi", "kiwi", "banana" };
+
+            // Create a new list to store unique items
+            List<string> uniqueItems = new List<string>();
+
+            // Loop through each item in the array
+            foreach (string item in array)
+            {
+                // Check if the item is already in the uniqueItems list
+                if (!uniqueItems.Contains(item))
+                {
+                    // If the item is not in the list, add it
+                    uniqueItems.Add(item);
+                }
+            }
+
+            // Convert the list back to an array
+            string[] newArray = uniqueItems.ToArray();
+
+            // Output the new array
+            foreach (string item in newArray)
+            {
+                Console.WriteLine(item);
+            }
+
+        }
+        #endregion
+
+        #region button presses
+        /// <summary>
+        /// this will apply the setting the user has set to the correct numbers and write it to the files
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void GetData(object sender, RoutedEventArgs e)
 		{
 			
 			while (this.path == string.Empty)
@@ -433,8 +486,57 @@ namespace aincradSaveModifier
 
 		private void FindFiles(object sender, RoutedEventArgs e)
 		{
+			string folder = getPath();
+			string statsFile;
+			string inventoryFile;
+			bool statsFound;
+			bool inventoryFound;
 
-		}
+            statsFile = folder + "\\avtr_5def9d3c-c59e-4b77-91fd-c7b23323db58";
+            inventoryFile = folder + "\\avtr_73e1a1b0-d9b9-4dc4-9544-5dae72ea8e64";
+
+            
+
+            statsFound = File.Exists(statsFile);
+            inventoryFound = File.Exists(inventoryFile);
+
+            while (statsFound != true || inventoryFound != true)
+			{
+				folder = getPath();
+
+                statsFile = folder + "\\avtr_5def9d3c-c59e-4b77-91fd-c7b23323db58";
+                inventoryFile = folder + "\\avtr_73e1a1b0-d9b9-4dc4-9544-5dae72ea8e64";
+
+                statsFound = File.Exists(statsFile);
+				inventoryFound = File.Exists(inventoryFile);
+
+				if (statsFound != true || inventoryFound != false)
+				{
+					System.Windows.MessageBox.Show("data not found, maybe try creating new data or finding the correct folder");
+					break;
+				}
+			}
+			this.StatsStatus.Text = "found";
+			this.InventoryStatus.Text = "found";
+
+			using (StreamWriter writer = new StreamWriter("BaseData/savedPaths.txt", true))
+			{
+				writer.WriteLine(folder + "$");
+                for (int i = 0; i < File.ReadAllText("BaseData/savedPaths.txt").Split("$").Length; i++)
+                {
+                    string wholeFile = File.ReadAllText("BaseData/savedPaths.txt");
+                    string currentFile = wholeFile.Split("$")[i];
+
+
+					//finish this method
+					checkPathFile();
+
+                    pathItemBox(currentFile.Split("\\")[currentFile.Split("\\").Length - 1]);
+
+                }
+            }
+
+        }
 
 		private void CreateFiles(object sender, RoutedEventArgs e)
 		{
@@ -448,7 +550,25 @@ namespace aincradSaveModifier
                 folderPath = getPath();
             }
 
-			try
+			string UserID = folderPath + "$";
+
+            using (StreamWriter writer = new StreamWriter("BaseData/savedPaths.txt", true))
+            {
+				writer.WriteLine(folderPath + "$");
+				writer.Close();
+
+				this.userIDS.Items.Clear();
+
+				for (int i = 0; i < File.ReadAllText("BaseData/savedPaths.txt").Split("$").Length; i++)
+				{
+					string wholeFile = File.ReadAllText("BaseData/savedPaths.txt");
+					string currentFile = wholeFile.Split("$")[i];
+					pathItemBox(currentFile.Split("\\")[currentFile.Split("\\").Length - 1]);
+
+                }
+            }
+
+            try
 			{
 				File.Copy("BaseData\\avtr_5def9d3c-c59e-4b77-91fd-c7b23323db58", folderPath + "\\avtr_5def9d3c-c59e-4b77-91fd-c7b23323db58");
                 System.Windows.MessageBox.Show("Save File Created");
@@ -468,6 +588,44 @@ namespace aincradSaveModifier
             }
 
 
+
+        }
+
+		private void UseSelected(object sender, RoutedEventArgs e)
+		{
+            int index = this.userIDS.SelectedIndex;
+
+            string wholeFile = File.ReadAllText("BasePath/savedPath.txt");
+            string selectedPath = wholeFile.Split("$")[index];
+
+            string statsFile;
+            string inventoryFile;
+            bool statsFound;
+            bool inventoryFound;
+
+            statsFile = selectedPath + "\\avtr_5def9d3c - c59e - 4b77 - 91fd - c7b23323db58";
+            inventoryFile = selectedPath + "\\avtr_73e1a1b0-d9b9-4dc4-9544-5dae72ea8e64";
+
+
+
+            statsFound = File.Exists(statsFile);
+            inventoryFound = File.Exists(inventoryFile);
+
+            while (statsFound != true || inventoryFound != true)
+            {
+                selectedPath = getPath();
+
+                statsFile = selectedPath + "\\avtr_5def9d3c - c59e - 4b77 - 91fd - c7b23323db58";
+                inventoryFile = selectedPath + "\\avtr_73e1a1b0-d9b9-4dc4-9544-5dae72ea8e64";
+
+                statsFound = File.Exists(statsFile);
+                inventoryFound = File.Exists(inventoryFile);
+
+                if (statsFound != true || inventoryFound != false)
+                {
+                    System.Windows.MessageBox.Show("data not found");
+                }
+            }
 
         }
         #endregion
