@@ -302,6 +302,18 @@ namespace aincradSaveModifier
             }
 			return newArray;
         }
+
+		private void SetLoation()
+		{
+			stats[4] = this.xLocation.value;
+			stats[5] = this.yLocation.value;
+			stats[6] = stats[6];
+		}
+
+		private void SetPlayTime()
+		{
+			
+		}
         #endregion
 
         #region button presses
@@ -336,9 +348,11 @@ namespace aincradSaveModifier
 			stats[1] = ((double)this.exp.Value) / (double)65536;
 			stats[2] = ((double)this.health.Value) / (double)256;
 			stats[3] = ((double)this.col.Value) / (double)65536;
-			stats[4] = stats[4];
-			stats[5] = stats[5];
-			stats[6] = stats[6];
+
+			SetLoation();
+
+			SetPlayTime();
+			
 			#endregion
 
 			#region set inventory
@@ -561,7 +575,6 @@ namespace aincradSaveModifier
 					string wholeFile = File.ReadAllText("BaseData/savedPaths.txt");
 					string currentFile = wholeFile.Split("$")[i];
 					pathItemBox(currentFile.Split("\\")[currentFile.Split("\\").Length - 1]);
-
                 }
             }
 
@@ -623,7 +636,6 @@ namespace aincradSaveModifier
                     System.Windows.MessageBox.Show("data not found");
                 }
             }
-
         }
         #endregion
 

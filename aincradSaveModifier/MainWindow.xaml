@@ -2815,7 +2815,7 @@
                             Text="x"
                             TextAlignment="Center" />
                         <Slider
-                            Name="x"
+                            Name="xLocation"
                             Grid.Row="3"
                             Margin="0,37,0,0"
                             Maximum="100"
@@ -2827,21 +2827,9 @@
                             Text="y"
                             TextAlignment="Center" />
                         <Slider
-                            Name="y"
+                            Name="yLocation"
                             Grid.Row="4"
                             Margin="0,38,0,0"
-                            Maximum="100"
-                            Minimum="-100" />
-                        <TextBlock
-                            Grid.Row="5"
-                            FontSize="20"
-                            Foreground="White"
-                            Text="z"
-                            TextAlignment="Center" />
-                        <Slider
-                            Name="z"
-                            Grid.Row="5"
-                            Margin="0,37,0,0"
                             Maximum="100"
                             Minimum="-100" />
                     </Grid>
