@@ -274,17 +274,15 @@ namespace aincradSaveModifier
 
         }
 
-        public void checkPathFile()
+        public string[] checkPathFile()
 		{
             string[] NewPathArray = File.ReadAllText("BaseData/savedPaths.txt").Split("$");
-
-            string[] array = { "apple", "banana", "cherry", "banana", "kiwi", "kiwi", "banana" };
 
             // Create a new list to store unique items
             List<string> uniqueItems = new List<string>();
 
             // Loop through each item in the array
-            foreach (string item in array)
+            foreach (string item in NewPathArray)
             {
                 // Check if the item is already in the uniqueItems list
                 if (!uniqueItems.Contains(item))
@@ -302,7 +300,7 @@ namespace aincradSaveModifier
             {
                 Console.WriteLine(item);
             }
-
+			return newArray;
         }
         #endregion
 
@@ -522,16 +520,15 @@ namespace aincradSaveModifier
 			using (StreamWriter writer = new StreamWriter("BaseData/savedPaths.txt", true))
 			{
 				writer.WriteLine(folder + "$");
-                for (int i = 0; i < File.ReadAllText("BaseData/savedPaths.txt").Split("$").Length; i++)
+				string[] sortedPaths = checkPathFile();
+
+				File.WriteAllText("BaseData/savedPaths.txt", string.Empty);
+
+                for (int i = 0; i < sortedPaths.Length; i++)
                 {
-                    string wholeFile = File.ReadAllText("BaseData/savedPaths.txt");
-                    string currentFile = wholeFile.Split("$")[i];
-
-
-					//finish this method
-					checkPathFile();
-
-                    pathItemBox(currentFile.Split("\\")[currentFile.Split("\\").Length - 1]);
+                    writer.WriteLine(sortedPaths[i]);
+                    
+                    pathItemBox(sortedPaths.Split("\\")[currentFile.Split("\\").Length - 1]);
 
                 }
             }
