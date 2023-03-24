@@ -1,17 +1,12 @@
-﻿using aincradSaveModifier.MVVM.View;
-using aincradSaveModifier.MVVM.ViewModel;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Security.Cryptography.X509Certificates;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Forms;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Collections.Generic;
-
 
 namespace aincradSaveModifier
 {
@@ -22,10 +17,15 @@ namespace aincradSaveModifier
 		private string inventory;
 		private string path;
         #endregion
+		
+		/// <summary>
+		/// this method is called when the applications is started
+		/// </summary>
         public MainWindow()
 		{
 			InitializeComponent();
 
+            //this sets the listBoxItems with the saved paths
             string[] sortedPaths = checkPathFile();
             File.WriteAllText("BaseData/savedPaths.txt", string.Empty);
 
@@ -45,7 +45,6 @@ namespace aincradSaveModifier
             }
         }
 
-		
 		#region private helpers
 		/// <summary>
 		/// turns json data into a dictionary, works with any file type as long as its in json format, returns the json data in a dictionary format
@@ -292,28 +291,26 @@ namespace aincradSaveModifier
 
         }
 
+		/// <summary>
+		/// this will open the savedPaths file and turn the text into an array and remove any repeating paths
+		/// </summary>
+		/// <returns>returns a new array with the with the unique paths</returns>
         public string[] checkPathFile()
 		{
             string[] NewPathArray = File.ReadAllText("BaseData/savedPaths.txt").Split("$");
 
-            // Create a new list to store unique items
             List<string> uniqueItems = new List<string>();
 
-            // Loop through each item in the array
             foreach (string item in NewPathArray)
             {
-                // Check if the item is already in the uniqueItems list
                 if (!uniqueItems.Contains(item))
                 {
-                    // If the item is not in the list, add it
                     uniqueItems.Add(item);
                 }
             }
 
-            // Convert the list back to an array
             string[] newArray = uniqueItems.ToArray();
 
-            // Output the new array
             foreach (string item in newArray)
             {
                 Console.WriteLine(item);
@@ -321,6 +318,10 @@ namespace aincradSaveModifier
 			return newArray;
         }
 
+		/// <summary>
+		/// this simply gets the slider values and sets then as the paremeters
+		/// </summary>
+		/// <returns>returns a double array with the location parameters</returns>
 		private double[] SetLoation()
 		{
 			double[] stats = new double[3];
@@ -331,9 +332,17 @@ namespace aincradSaveModifier
 			return stats;
 		}
 
+		/// <summary>
+		/// this method sets playtime parameters
+		/// </summary>
+		/// <returns>returns a double array with the paremeters for playtime</returns>
 		private double[] SetPlayTime()
 		{
-			double[] playTime = new double[7];
+			//param 7 is fallback i think
+			double[] playTime = new double[9];
+
+			//playtime calculations go here
+
 			return playTime;
 		}
         #endregion
@@ -462,11 +471,11 @@ namespace aincradSaveModifier
 			#endregion
 		}
 
-
+		#region view switches;
 		/// <summary>
 		/// this switches the view by changing visibility
 		/// </summary>
-        public void ViewSwitch()
+		public void ViewSwitch()
         {
 			if (this.HomeButton.IsChecked== true)
 			{
@@ -518,7 +527,13 @@ namespace aincradSaveModifier
         {
             ViewSwitch();
         }
-
+        #endregion
+        
+		/// <summary>
+		/// this will tell the user to find their data. it then will check if the data is there and add it to the savedPaths file
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		private void FindFiles(object sender, RoutedEventArgs e)
 		{
 			string folder = getPath();
@@ -582,6 +597,11 @@ namespace aincradSaveModifier
             }
         }
 
+		/// <summary>
+		/// this will have the user open the folder to create the files in, and create them. it will then add the path to the savedPaths file
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		private void CreateFiles(object sender, RoutedEventArgs e)
 		{
 			string folderPath;
@@ -634,6 +654,11 @@ namespace aincradSaveModifier
 
         }
 
+		/// <summary>
+		/// this will get the selected item from a list box and get the path from the savedPaths file and load the save files
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		private void UseSelected(object sender, RoutedEventArgs e)
 		{
             int index = this.userIDS.SelectedIndex;
@@ -672,8 +697,5 @@ namespace aincradSaveModifier
 			this.path = selectedPath;
         }
         #endregion
-
-
-
     }
 }
