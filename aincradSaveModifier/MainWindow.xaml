@@ -112,7 +112,7 @@
                 Grid.Row="1"
                 Grid.Column="1"
                 Background="#00131B"
-                Visibility="Visible">
+                Visibility="Hidden">
                 <StackPanel>
                     <TextBlock
                         Margin="0,0,0,20"
@@ -260,9 +260,9 @@
                             Background="#1fa8d1"
                             CornerRadius="10">
                             <Button
-                                Click="UseSelected"
-                                BorderThickness="0"
                                 Background="Transparent"
+                                BorderThickness="0"
+                                Click="UseSelected"
                                 Content="Use selected ID"
                                 FontFamily="/Fonts/#SAO UI TT"
                                 FontSize="26"
@@ -2751,89 +2751,94 @@
                 Grid.Row="1"
                 Grid.Column="1"
                 Background="#00131B"
-                Visibility="Hidden">
-                <StackPanel>
-                    <Grid Width="650" Height="465">
-                        <Grid.RowDefinitions>
-                            <RowDefinition />
-                            <RowDefinition />
-                            <RowDefinition />
-                            <RowDefinition />
-                            <RowDefinition />
-                            <RowDefinition />
-                        </Grid.RowDefinitions>
-                        <TextBlock
-                            Grid.Row="0"
-                            FontFamily="/Fonts/#SAO UI TT"
-                            FontSize="24"
-                            Foreground="White"
-                            Text="Experence 0-65536"
-                            TextAlignment="Center" />
-                        <Slider
-                            Name="exp"
-                            Grid.Row="0"
-                            Margin="0,38,0,0"
-                            IsSnapToTickEnabled="True"
-                            Maximum="65536"
-                            Minimum="0"
-                            TickFrequency="1"
-                            TickPlacement="Both" />
-                        <TextBlock
-                            Grid.Row="1"
-                            FontFamily="/Fonts/#SAO UI TT"
-                            FontSize="24"
-                            Foreground="White"
-                            Text="Health"
-                            TextAlignment="Center" />
-                        <Slider
-                            Name="health"
-                            Grid.Row="1"
-                            Margin="0,37,0,0"
-                            Maximum="250"
-                            Minimum="0"
-                            TickFrequency="1"
-                            TickPlacement="Both" />
-                        <TextBlock
-                            Grid.Row="2"
-                            FontFamily="/Fonts/#SAO UI TT"
-                            FontSize="24"
-                            Foreground="White"
-                            Text="Col"
-                            TextAlignment="Center" />
-                        <Slider
-                            Name="col"
-                            Grid.Row="2"
-                            Margin="0,30,0,0"
-                            Maximum="65535"
-                            Minimum="0"
-                            TickFrequency="1"
-                            TickPlacement="Both" />
-                        <TextBlock
-                            Grid.Row="3"
-                            FontSize="20"
-                            Foreground="White"
-                            Text="x"
-                            TextAlignment="Center" />
-                        <Slider
-                            Name="xLocation"
-                            Grid.Row="3"
-                            Margin="0,37,0,0"
-                            Maximum="100"
-                            Minimum="-100" />
-                        <TextBlock
-                            Grid.Row="4"
-                            FontSize="20"
-                            Foreground="White"
-                            Text="y"
-                            TextAlignment="Center" />
-                        <Slider
-                            Name="yLocation"
-                            Grid.Row="4"
-                            Margin="0,38,0,0"
-                            Maximum="100"
-                            Minimum="-100" />
-                    </Grid>
-                </StackPanel>
+                Visibility="Visible">
+                <ScrollViewer Height="500">
+                    <StackPanel Height="1000">
+                        
+                            <TextBlock
+                                Grid.Row="0"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="24"
+                                Foreground="White"
+                                Text="Experence 0-65536"
+                                TextAlignment="Center" />
+                            <Slider
+                                Name="exp"
+                                Grid.Row="0"
+                                Margin="0,38,0,0"
+                                IsSnapToTickEnabled="True"
+                                Maximum="65536"
+                                Minimum="0"
+                                TickFrequency="1"
+                                TickPlacement="Both" />
+                            <TextBlock
+                                Grid.Row="1"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="24"
+                                Foreground="White"
+                                Text="Health"
+                                TextAlignment="Center" />
+                            <Slider
+                                Name="health"
+                                Grid.Row="1"
+                                Margin="0,37,0,0"
+                                Maximum="250"
+                                Minimum="0"
+                                TickFrequency="1"
+                                TickPlacement="Both" />
+                            <TextBlock
+                                Grid.Row="2"
+                                FontFamily="/Fonts/#SAO UI TT"
+                                FontSize="24"
+                                Foreground="White"
+                                Text="Col"
+                                TextAlignment="Center" />
+                            <Slider
+                                Name="col"
+                                Grid.Row="2"
+                                Margin="0,30,0,0"
+                                Maximum="65535"
+                                Minimum="0"
+                                TickFrequency="1"
+                                TickPlacement="Both" />
+                            <Grid
+                                
+                                Grid.Row="5"
+                                 Height="700" Width="700">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50" />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50" />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+
+                                <Slider
+                                    Name="xLocation"
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    Margin="0,15,25,0"
+                                    Maximum="100"
+                                    Width="650"
+                                    Minimum="-100" />
+
+                                <Slider
+                                    Name="yLocation"
+                                    Grid.Row="1"
+                                    Height="650"
+                                    Grid.Column="0"
+                                    Margin="15,0,0,50"
+                                    Maximum="100"
+                                    Minimum="-100"
+                                    Orientation="Vertical" />
+                                <Image Grid.Row="1" Grid.Column="1" Margin="0,0,28,50" />
+                            </Grid>
+
+                    </StackPanel>
+                </ScrollViewer>
+
             </StackPanel>
         </Grid>
     </Border>

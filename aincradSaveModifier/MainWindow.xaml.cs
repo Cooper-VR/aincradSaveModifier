@@ -21,11 +21,29 @@ namespace aincradSaveModifier
 		private string stats;
 		private string inventory;
 		private string path;
-		#endregion
-		public MainWindow()
+        #endregion
+        public MainWindow()
 		{
 			InitializeComponent();
-		}
+
+            string[] sortedPaths = checkPathFile();
+            File.WriteAllText("BaseData/savedPaths.txt", string.Empty);
+
+            this.userIDS.Items.Clear();
+            for (int i = 0; i < sortedPaths.Length; i++)
+            {
+                using (StreamWriter writer = new StreamWriter("BaseData/savedPaths.txt", true))
+                {
+                    if (sortedPaths[i] != "")
+                    {
+                        writer.Write(sortedPaths[i] + "$");
+
+                        pathItemBox(sortedPaths[i].Split("\\")[sortedPaths[i].Split("\\").Length - 1]);
+                    }
+
+                }
+            }
+        }
 
 		
 		#region private helpers
@@ -303,16 +321,20 @@ namespace aincradSaveModifier
 			return newArray;
         }
 
-		private void SetLoation()
+		private double[] SetLoation()
 		{
-			stats[4] = this.xLocation.value;
-			stats[5] = this.yLocation.value;
-			stats[6] = stats[6];
+			double[] stats = new double[3];
+			stats[0] = this.xLocation.Value;
+			stats[1] = this.yLocation.Value;
+			stats[2] = stats[2];
+
+			return stats;
 		}
 
-		private void SetPlayTime()
+		private double[] SetPlayTime()
 		{
-			
+			double[] playTime = new double[7];
+			return playTime;
 		}
         #endregion
 
@@ -329,11 +351,12 @@ namespace aincradSaveModifier
 			{
                 this.path = this.getPath();
 
-                if (path != null)
-                {
-                    this.stats = path + "\\avtr_5def9d3c-c59e-4b77-91fd-c7b23323db58";
-                    this.inventory = path + "\\avtr_73e1a1b0-d9b9-4dc4-9544-5dae72ea8e64";
-                }
+                
+            }
+			if (path != null)
+            {
+                this.stats = path + "\\avtr_5def9d3c-c59e-4b77-91fd-c7b23323db58";
+                this.inventory = path + "\\avtr_73e1a1b0-d9b9-4dc4-9544-5dae72ea8e64";
             }
 
             //gets all the data I might need including old data
@@ -349,9 +372,9 @@ namespace aincradSaveModifier
 			stats[2] = ((double)this.health.Value) / (double)256;
 			stats[3] = ((double)this.col.Value) / (double)65536;
 
-			SetLoation();
+            double[] LocationData = SetLoation();
 
-			SetPlayTime();
+			double[] playTime = SetPlayTime();
 			
 			#endregion
 
@@ -531,22 +554,32 @@ namespace aincradSaveModifier
 			this.StatsStatus.Text = "found";
 			this.InventoryStatus.Text = "found";
 
-			using (StreamWriter writer = new StreamWriter("BaseData/savedPaths.txt", true))
+			string[] sortedPaths;
+
+
+            using (StreamWriter writer = new StreamWriter("BaseData/savedPaths.txt", true))
 			{
-				writer.WriteLine(folder + "$");
-				string[] sortedPaths = checkPathFile();
-
-				File.WriteAllText("BaseData/savedPaths.txt", string.Empty);
-
-                for (int i = 0; i < sortedPaths.Length; i++)
-                {
-                    writer.WriteLine(sortedPaths[i]);
-                    
-                    pathItemBox(sortedPaths.Split("\\")[currentFile.Split("\\").Length - 1]);
-
-                }
+				writer.Write(folder + "$");
+				writer.Close();
             }
+			sortedPaths = checkPathFile();
+			File.WriteAllText("BaseData/savedPaths.txt", string.Empty);
 
+			this.userIDS.Items.Clear();
+            for (int i = 0; i < sortedPaths.Length; i++)
+            {
+                using (StreamWriter writer = new StreamWriter("BaseData/savedPaths.txt", true))
+                {
+					if (sortedPaths[i] != "")
+					{
+						writer.Write(sortedPaths[i] + "$");
+
+						pathItemBox(sortedPaths[i].Split("\\")[sortedPaths[i].Split("\\").Length - 1]);
+					}
+					
+                }
+                
+            }
         }
 
 		private void CreateFiles(object sender, RoutedEventArgs e)
@@ -605,7 +638,7 @@ namespace aincradSaveModifier
 		{
             int index = this.userIDS.SelectedIndex;
 
-            string wholeFile = File.ReadAllText("BasePath/savedPath.txt");
+            string wholeFile = File.ReadAllText("BaseData/savedPaths.txt");
             string selectedPath = wholeFile.Split("$")[index];
 
             string statsFile;
@@ -613,7 +646,7 @@ namespace aincradSaveModifier
             bool statsFound;
             bool inventoryFound;
 
-            statsFile = selectedPath + "\\avtr_5def9d3c - c59e - 4b77 - 91fd - c7b23323db58";
+            statsFile = selectedPath + "\\avtr_5def9d3c-c59e-4b77-91fd-c7b23323db58";
             inventoryFile = selectedPath + "\\avtr_73e1a1b0-d9b9-4dc4-9544-5dae72ea8e64";
 
 
@@ -625,7 +658,7 @@ namespace aincradSaveModifier
             {
                 selectedPath = getPath();
 
-                statsFile = selectedPath + "\\avtr_5def9d3c - c59e - 4b77 - 91fd - c7b23323db58";
+                statsFile = selectedPath + "\\avtr_5def9d3c-c59e-4b77-91fd-c7b23323db58";
                 inventoryFile = selectedPath + "\\avtr_73e1a1b0-d9b9-4dc4-9544-5dae72ea8e64";
 
                 statsFound = File.Exists(statsFile);
@@ -636,6 +669,7 @@ namespace aincradSaveModifier
                     System.Windows.MessageBox.Show("data not found");
                 }
             }
+			this.path = selectedPath;
         }
         #endregion
 
