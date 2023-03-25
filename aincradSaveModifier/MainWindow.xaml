@@ -112,7 +112,7 @@
                 Grid.Row="1"
                 Grid.Column="1"
                 Background="#00131B"
-                Visibility="Hidden">
+                Visibility="Visible">
                 <StackPanel>
                     <TextBlock
                         Margin="0,0,0,20"
@@ -2751,7 +2751,7 @@
                 Grid.Row="1"
                 Grid.Column="1"
                 Background="#00131B"
-                Visibility="Visible">
+                Visibility="Hidden">
                 <ScrollViewer Height="500">
                     <StackPanel Height="1000">
 

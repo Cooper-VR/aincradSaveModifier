@@ -343,13 +343,7 @@ namespace aincradSaveModifier
 			
 			double[] playTime = new double[7];
 
-			//playtime calculations go here 
-			//jan1 = 0.696823120117188
-			//jan2 = 0.700729370117188
-
-			// (jan2 - jan1) * 256 = daysSince
-			// (jan2 - 0.696823120117188) * 256 = 1
-			// daysSince/256 + 0.696823120117188 = jan2
+		
 			playTime[0] = -1;
 			playTime[1] = -1;
 
