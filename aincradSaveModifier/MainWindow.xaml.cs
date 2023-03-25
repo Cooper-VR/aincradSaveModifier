@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Numerics;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Forms;
@@ -339,18 +341,64 @@ namespace aincradSaveModifier
 		private double[] SetPlayTime()
 		{
 			
-			double[] playTime = new double[9];
+			double[] playTime = new double[7];
 
-            //playtime calculations go here 
-            //jan1 = 0.696823120117188
-            //jan2 = 0.700729370117188
+			//playtime calculations go here 
+			//jan1 = 0.696823120117188
+			//jan2 = 0.700729370117188
 
-            // (jan2 - jan1) * 256 = daysSince
-            // (jan2 - 0.696823120117188) * 256 = 1
-            // daysSince/256 + 0.696823120117188 = jan2
-            playTime[2] = 
+			// (jan2 - jan1) * 256 = daysSince
+			// (jan2 - 0.696823120117188) * 256 = 1
+			// daysSince/256 + 0.696823120117188 = jan2
+			playTime[0] = -1;
+			playTime[1] = -1;
 
-			return playTime;
+
+            int hours;
+			int minutes;
+
+			if (int.TryParse(this.Hours.Text, out hours) != true)
+			{
+				System.Windows.MessageBox.Show("invalid input for hours");
+				hours = 100;
+			}
+
+            if (int.TryParse(this.Hours.Text, out minutes) != true)
+            {
+                System.Windows.MessageBox.Show("invalid input for minutes");
+                minutes = 0;
+            }
+
+			int totalSeconds = (hours * 3600) + (minutes * 60);
+
+			double bigMuliplier = 18 * 3600 + 12 * 60;
+			double smallMuliplier = 4 * 60 + 20;
+
+			int bigIterations;
+			int smallIterations;
+
+			
+
+            if (totalSeconds > bigMuliplier)
+			{
+				bigIterations = (int)Math.Floor((totalSeconds / bigMuliplier));
+				playTime[2] = (double)bigIterations / (double)256;
+			}
+
+			double remainingSeconds = totalSeconds % bigMuliplier;
+
+			if (remainingSeconds > smallMuliplier)
+			{
+                smallIterations = (int)Math.Floor((remainingSeconds / smallMuliplier));
+                playTime[3] = (double)smallIterations / (double)65536;
+            }
+
+			playTime[4] = -1;
+			playTime[5] = -1;
+			playTime[6] = -1;
+
+
+            return playTime;
 		}
         #endregion
 
@@ -361,7 +409,7 @@ namespace aincradSaveModifier
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void GetData(object sender, RoutedEventArgs e)
-		{
+		 {
 			
 			while (this.path == string.Empty)
 			{
@@ -369,7 +417,7 @@ namespace aincradSaveModifier
 
                 
             }
-			if (path != null)
+			if (path != string.Empty)
             {
                 this.stats = path + "\\avtr_5def9d3c-c59e-4b77-91fd-c7b23323db58";
                 this.inventory = path + "\\avtr_73e1a1b0-d9b9-4dc4-9544-5dae72ea8e64";
@@ -390,13 +438,45 @@ namespace aincradSaveModifier
 
             double[] LocationData = SetLoation();
 
-			double[] playTime = SetPlayTime();
-			
-			#endregion
+			stats[4] = LocationData[0];
+            stats[5] = LocationData[1];
+            stats[6] = LocationData[2];
 
-			#region set inventory
+            double[] playTime = SetPlayTime();
+
 			
-			for (int i = 0; i < 7; i++)
+			stats[7] = stats[7];
+            stats[8] = stats[8];
+            stats[9] = stats[9];
+            stats[10] = stats[10];
+            stats[11] = playTime[2];
+            stats[12] = playTime[3];
+            stats[13] = stats[13];
+            stats[14] = stats[14];
+            stats[15] = stats[15];
+
+
+            string inputString = "{\"animationParameters\":[{\"name\":\"newparameter_0\", \"value\":placeHolder}, {\"name\":\"newparameter_1\", \"value\":placeHolder}, {\"name\":\"newparameter_2\", \"value\":placeHolder}, {\"name\":\"newparameter_3\", \"value\":placeHolder}, {\"name\":\"newparameter_4\", \"value\":placeHolder}, {\"name\":\"newparameter_5\", \"value\":placeHolder}, {\"name\":\"newparameter_6\", \"value\":placeHolder}, {\"name\":\"newparameter_7\", \"value\":placeHolder}, {\"name\":\"newparameter_8\", \"value\":placeHolder}, {\"name\":\"newparameter_9\", \"value\":placeHolder}, {\"name\":\"newparameter_10\", \"value\":placeHolder}, {\"name\":\"newparameter_11\", \"value\":placeHolder}, {\"name\":\"newparameter_12\", \"value\":placeHolder}, {\"name\":\"newparameter_13\", \"value\":placeHolder}, {\"name\":\"newparameter_14\", \"value\":placeHolder}, {\"name\":\"newparameter_15\", \"value\":placeHolder}]}";
+
+			for (int i = 0; i < 16; i++)
+			{
+                var regex = new Regex(Regex.Escape("placeHolder"));
+                inputString = regex.Replace(inputString, stats[i].ToString(), 1);
+			}
+
+            File.WriteAllText(this.stats, string.Empty);
+
+            using (StreamWriter writer = new StreamWriter(this.stats, true))
+			{
+				writer.Write(inputString);
+				writer.Close();
+			}
+
+                #endregion
+
+                #region set inventory
+
+                for (int i = 0; i < 7; i++)
 			{
 				string elementName = "item" + i.ToString();
 
@@ -576,7 +656,12 @@ namespace aincradSaveModifier
 			this.StatsStatus.Text = "found";
 			this.InventoryStatus.Text = "found";
 
-			string[] sortedPaths;
+			this.path = folder;
+			
+
+
+
+            string[] sortedPaths;
 
 
             using (StreamWriter writer = new StreamWriter("BaseData/savedPaths.txt", true))

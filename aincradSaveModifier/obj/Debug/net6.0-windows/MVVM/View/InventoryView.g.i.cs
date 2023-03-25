@@ -206,7 +206,7 @@ namespace aincradSaveModifier.MVVM.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/aincradSaveModifier;V1.0.0.0;component/mvvm/view/inventoryview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/aincradSaveModifier;component/mvvm/view/inventoryview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\MVVM\View\InventoryView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
