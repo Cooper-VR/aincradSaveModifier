@@ -338,10 +338,17 @@ namespace aincradSaveModifier
 		/// <returns>returns a double array with the paremeters for playtime</returns>
 		private double[] SetPlayTime()
 		{
-			//param 7 is fallback i think
+			
 			double[] playTime = new double[9];
 
-			//playtime calculations go here
+            //playtime calculations go here 
+            //jan1 = 0.696823120117188
+            //jan2 = 0.700729370117188
+
+            // (jan2 - jan1) * 256 = daysSince
+            // (jan2 - 0.696823120117188) * 256 = 1
+            // daysSince/256 + 0.696823120117188 = jan2
+            playTime[2] = 
 
 			return playTime;
 		}
