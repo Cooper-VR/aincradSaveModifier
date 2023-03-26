@@ -18,34 +18,34 @@ namespace aincradSaveModifier
 		private string stats;
 		private string inventory;
 		private string path;
-        #endregion
+		#endregion
 		
 		/// <summary>
 		/// this method is called when the applications is started
 		/// </summary>
-        public MainWindow()
+		public MainWindow()
 		{
 			InitializeComponent();
 
-            //this sets the listBoxItems with the saved paths
-            string[] sortedPaths = checkPathFile();
-            File.WriteAllText("BaseData/savedPaths.txt", string.Empty);
+			//this sets the listBoxItems with the saved paths
+			string[] sortedPaths = checkPathFile();
+			File.WriteAllText("BaseData/savedPaths.txt", string.Empty);
 
-            this.userIDS.Items.Clear();
-            for (int i = 0; i < sortedPaths.Length; i++)
-            {
-                using (StreamWriter writer = new StreamWriter("BaseData/savedPaths.txt", true))
-                {
-                    if (sortedPaths[i] != "")
-                    {
-                        writer.Write(sortedPaths[i] + "$");
+			this.userIDS.Items.Clear();
+			for (int i = 0; i < sortedPaths.Length; i++)
+			{
+				using (StreamWriter writer = new StreamWriter("BaseData/savedPaths.txt", true))
+				{
+					if (sortedPaths[i] != "")
+					{
+						writer.Write(sortedPaths[i] + "$");
 
-                        pathItemBox(sortedPaths[i].Split("\\")[sortedPaths[i].Split("\\").Length - 1]);
-                    }
+						pathItemBox(sortedPaths[i].Split("\\")[sortedPaths[i].Split("\\").Length - 1]);
+					}
 
-                }
-            }
-        }
+				}
+			}
+		}
 
 		#region private helpers
 		/// <summary>
@@ -291,34 +291,34 @@ namespace aincradSaveModifier
 
 			this.userIDS.Items.Add(listBox);
 
-        }
+		}
 
 		/// <summary>
 		/// this will open the savedPaths file and turn the text into an array and remove any repeating paths
 		/// </summary>
 		/// <returns>returns a new array with the with the unique paths</returns>
-        public string[] checkPathFile()
+		public string[] checkPathFile()
 		{
-            string[] NewPathArray = File.ReadAllText("BaseData/savedPaths.txt").Split("$");
+			string[] NewPathArray = File.ReadAllText("BaseData/savedPaths.txt").Split("$");
 
-            List<string> uniqueItems = new List<string>();
+			List<string> uniqueItems = new List<string>();
 
-            foreach (string item in NewPathArray)
-            {
-                if (!uniqueItems.Contains(item))
-                {
-                    uniqueItems.Add(item);
-                }
-            }
+			foreach (string item in NewPathArray)
+			{
+				if (!uniqueItems.Contains(item))
+				{
+					uniqueItems.Add(item);
+				}
+			}
 
-            string[] newArray = uniqueItems.ToArray();
+			string[] newArray = uniqueItems.ToArray();
 
-            foreach (string item in newArray)
-            {
-                Console.WriteLine(item);
-            }
+			foreach (string item in newArray)
+			{
+				Console.WriteLine(item);
+			}
 			return newArray;
-        }
+		}
 
 		/// <summary>
 		/// this simply gets the slider values and sets then as the paremeters
@@ -348,7 +348,7 @@ namespace aincradSaveModifier
 			playTime[1] = -1;
 
 
-            int hours;
+			int hours;
 			int minutes;
 
 			if (int.TryParse(this.Hours.Text, out hours) != true)
@@ -357,11 +357,11 @@ namespace aincradSaveModifier
 				hours = 100;
 			}
 
-            if (int.TryParse(this.Hours.Text, out minutes) != true)
-            {
-                System.Windows.MessageBox.Show("invalid input for minutes");
-                minutes = 0;
-            }
+			if (int.TryParse(this.Hours.Text, out minutes) != true)
+			{
+				System.Windows.MessageBox.Show("invalid input for minutes");
+				minutes = 0;
+			}
 
 			int totalSeconds = (hours * 3600) + (minutes * 60);
 
@@ -373,7 +373,7 @@ namespace aincradSaveModifier
 
 			
 
-            if (totalSeconds > bigMuliplier)
+			if (totalSeconds > bigMuliplier)
 			{
 				bigIterations = (int)Math.Floor((totalSeconds / bigMuliplier));
 				playTime[2] = (double)bigIterations / (double)256;
@@ -383,42 +383,42 @@ namespace aincradSaveModifier
 
 			if (remainingSeconds > smallMuliplier)
 			{
-                smallIterations = (int)Math.Floor((remainingSeconds / smallMuliplier));
-                playTime[3] = (double)smallIterations / (double)65536;
-            }
+				smallIterations = (int)Math.Floor((remainingSeconds / smallMuliplier));
+				playTime[3] = (double)smallIterations / (double)65536;
+			}
 
 			playTime[4] = -1;
 			playTime[5] = -1;
 			playTime[6] = -1;
 
 
-            return playTime;
+			return playTime;
 		}
-        #endregion
+		#endregion
 
-        #region button presses
-        /// <summary>
-        /// this will apply the setting the user has set to the correct numbers and write it to the files
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void GetData(object sender, RoutedEventArgs e)
+		#region button presses
+		/// <summary>
+		/// this will apply the setting the user has set to the correct numbers and write it to the files
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void GetData(object sender, RoutedEventArgs e)
 		 {
 			
-			while (this.path == string.Empty)
+			//path check
+			if (this.path == null)
 			{
-                this.path = this.getPath();
-
-                
-            }
+				System.Windows.MessageBox.Show("file location not specified");
+				return;
+			}
 			if (path != string.Empty)
-            {
-                this.stats = path + "\\avtr_5def9d3c-c59e-4b77-91fd-c7b23323db58";
-                this.inventory = path + "\\avtr_73e1a1b0-d9b9-4dc4-9544-5dae72ea8e64";
-            }
+			{
+				this.stats = path + "\\avtr_5def9d3c-c59e-4b77-91fd-c7b23323db58";
+				this.inventory = path + "\\avtr_73e1a1b0-d9b9-4dc4-9544-5dae72ea8e64";
+			}
 
-            //gets all the data I might need including old data
-            double[] statData = new double[16];
+			//gets all the data I might need including old data
+			double[] statData = new double[16];
 			double[] stats = jsonStrip(jsonDecompile(this.stats));
 
 			double[] inventoryData = new double[16];
@@ -430,47 +430,43 @@ namespace aincradSaveModifier
 			stats[2] = ((double)this.health.Value) / (double)256;
 			stats[3] = ((double)this.col.Value) / (double)65536;
 
-            double[] LocationData = SetLoation();
+			double[] LocationData = SetLoation();
 
 			stats[4] = LocationData[0];
-            stats[5] = LocationData[1];
-            stats[6] = LocationData[2];
+			stats[5] = LocationData[1];
+			stats[6] = LocationData[2];
 
-            double[] playTime = SetPlayTime();
-
+			double[] playTime = SetPlayTime();
 			
 			stats[7] = stats[7];
-            stats[8] = stats[8];
-            stats[9] = stats[9];
-            stats[10] = stats[10];
-            stats[11] = playTime[2];
-            stats[12] = playTime[3];
-            stats[13] = stats[13];
-            stats[14] = stats[14];
-            stats[15] = stats[15];
+			stats[8] = stats[8];
+			stats[9] = stats[9];
+			stats[10] = stats[10];
+			stats[11] = playTime[2];
+			stats[12] = playTime[3];
+			stats[13] = stats[13];
+			stats[14] = stats[14];
+			stats[15] = stats[15];
 
-
-            string inputString = "{\"animationParameters\":[{\"name\":\"newparameter_0\", \"value\":placeHolder}, {\"name\":\"newparameter_1\", \"value\":placeHolder}, {\"name\":\"newparameter_2\", \"value\":placeHolder}, {\"name\":\"newparameter_3\", \"value\":placeHolder}, {\"name\":\"newparameter_4\", \"value\":placeHolder}, {\"name\":\"newparameter_5\", \"value\":placeHolder}, {\"name\":\"newparameter_6\", \"value\":placeHolder}, {\"name\":\"newparameter_7\", \"value\":placeHolder}, {\"name\":\"newparameter_8\", \"value\":placeHolder}, {\"name\":\"newparameter_9\", \"value\":placeHolder}, {\"name\":\"newparameter_10\", \"value\":placeHolder}, {\"name\":\"newparameter_11\", \"value\":placeHolder}, {\"name\":\"newparameter_12\", \"value\":placeHolder}, {\"name\":\"newparameter_13\", \"value\":placeHolder}, {\"name\":\"newparameter_14\", \"value\":placeHolder}, {\"name\":\"newparameter_15\", \"value\":placeHolder}]}";
+			string inputString = "{\"animationParameters\":[{\"name\":\"newparameter_0\", \"value\":placeHolder}, {\"name\":\"newparameter_1\", \"value\":placeHolder}, {\"name\":\"newparameter_2\", \"value\":placeHolder}, {\"name\":\"newparameter_3\", \"value\":placeHolder}, {\"name\":\"newparameter_4\", \"value\":placeHolder}, {\"name\":\"newparameter_5\", \"value\":placeHolder}, {\"name\":\"newparameter_6\", \"value\":placeHolder}, {\"name\":\"newparameter_7\", \"value\":placeHolder}, {\"name\":\"newparameter_8\", \"value\":placeHolder}, {\"name\":\"newparameter_9\", \"value\":placeHolder}, {\"name\":\"newparameter_10\", \"value\":placeHolder}, {\"name\":\"newparameter_11\", \"value\":placeHolder}, {\"name\":\"newparameter_12\", \"value\":placeHolder}, {\"name\":\"newparameter_13\", \"value\":placeHolder}, {\"name\":\"newparameter_14\", \"value\":placeHolder}, {\"name\":\"newparameter_15\", \"value\":placeHolder}]}";
 
 			for (int i = 0; i < 16; i++)
 			{
-                var regex = new Regex(Regex.Escape("placeHolder"));
-                inputString = regex.Replace(inputString, stats[i].ToString(), 1);
+				var regex = new Regex(Regex.Escape("placeHolder"));
+				inputString = regex.Replace(inputString, stats[i].ToString(), 1);
 			}
 
-            File.WriteAllText(this.stats, string.Empty);
+			File.WriteAllText(this.stats, string.Empty);
 
-            using (StreamWriter writer = new StreamWriter(this.stats, true))
+			using (StreamWriter writer = new StreamWriter(this.stats, true))
 			{
 				writer.Write(inputString);
 				writer.Close();
 			}
-
-                #endregion
-
-                #region set inventory
-
-                for (int i = 0; i < 7; i++)
+			#endregion
+			
+			#region set inventory
+			for (int i = 0; i < 7; i++)
 			{
 				string elementName = "item" + i.ToString();
 
@@ -482,41 +478,41 @@ namespace aincradSaveModifier
 
 					if (elementContent != "mirror")
 					{
-                        string amountName = "slot" + i.ToString() + "Amount";
-                        var currentAmountElement = this.FindName(amountName) as System.Windows.Controls.TextBox;
-                        string amount = currentAmountElement.Text.ToString();
-                        int currentAmount;
+						string amountName = "slot" + i.ToString() + "Amount";
+						var currentAmountElement = this.FindName(amountName) as System.Windows.Controls.TextBox;
+						string amount = currentAmountElement.Text.ToString();
+						int currentAmount;
 
-                        if (int.TryParse(amount, out currentAmount) == false)
-                        {
-                            currentAmount = 1;
-                        }
-
-
-                        if (currentAmount < 0)
-                        {
-                            currentAmount = Math.Abs(currentAmount);
-                        }
-                        if (currentAmount > 64)
-                        {
-                            currentAmount = 64;
-                        }
+						if (int.TryParse(amount, out currentAmount) == false)
+						{
+							currentAmount = 1;
+						}
 
 
-                        inventoryData[i] = itemValue(elementContent, currentAmount);
+						if (currentAmount < 0)
+						{
+							currentAmount = Math.Abs(currentAmount);
+						}
+						if (currentAmount > 64)
+						{
+							currentAmount = 64;
+						}
+
+
+						inventoryData[i] = itemValue(elementContent, currentAmount);
 					}
 					else
 					{
-                        string amountName = "slot" + i.ToString() + "Amount";
-                        var currentAmountElement = this.FindName(amountName) as System.Windows.Controls.TextBox;
-                        string amount = currentAmountElement.Text.ToString();
-                        int currentAmount;
+						string amountName = "slot" + i.ToString() + "Amount";
+						var currentAmountElement = this.FindName(amountName) as System.Windows.Controls.TextBox;
+						string amount = currentAmountElement.Text.ToString();
+						int currentAmount;
 
 						currentAmount = 1;
 
 
-                        inventoryData[i] = itemValue(elementContent, currentAmount);
-                    }
+						inventoryData[i] = itemValue(elementContent, currentAmount);
+					}
 
 					
 				} catch (System.NullReferenceException ex)
@@ -524,7 +520,6 @@ namespace aincradSaveModifier
 					Debug.WriteLine(ex.Message);
 					inventory[i] = 0;
 				}
-				
 			}
 
 			int currentIndex = 0;
@@ -549,6 +544,21 @@ namespace aincradSaveModifier
 					currentIndex++;
 				}
 			}
+
+
+			for (int i = 0; i < 16; i++)
+			{
+				var regex = new Regex(Regex.Escape("placeHolder"));
+				inputString = regex.Replace(inputString, inventoryData[i].ToString(), 1);
+			}
+
+			File.WriteAllText(this.inventory, string.Empty);
+
+			using (StreamWriter writer = new StreamWriter(this.inventory, true))
+			{
+				writer.Write(inputString);
+				writer.Close();
+			}
 			#endregion
 		}
 
@@ -557,27 +567,27 @@ namespace aincradSaveModifier
 		/// this switches the view by changing visibility
 		/// </summary>
 		public void ViewSwitch()
-        {
+		{
 			if (this.HomeButton.IsChecked== true)
 			{
 				this.InventoryWindow.Visibility  = Visibility.Hidden;
 				this.StatsWindow.Visibility = Visibility.Hidden;
 				this.LoginWindow.Visibility = Visibility.Visible;
-            } else if (this.StatsButton.IsChecked == true) 
+			} else if (this.StatsButton.IsChecked == true) 
 			{
 				this.LoginWindow.Visibility = Visibility.Hidden;
-                this.InventoryWindow.Visibility = Visibility.Hidden;
+				this.InventoryWindow.Visibility = Visibility.Hidden;
 				this.StatsWindow.Visibility = Visibility.Visible;
-            } else if (InventoryButton.IsChecked == true)
+			} else if (InventoryButton.IsChecked == true)
 			{
 				this.LoginWindow.Visibility = Visibility.Hidden;
-                this.StatsWindow.Visibility = Visibility.Hidden;
+				this.StatsWindow.Visibility = Visibility.Hidden;
 				this.InventoryWindow.Visibility = Visibility.Visible;
-            } else
+			} else
 			{
 				this.HomeButton.IsChecked = true;
 			}
-        } 
+		} 
 
 		/// <summary>
 		/// for when view is to be switched
@@ -585,31 +595,31 @@ namespace aincradSaveModifier
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
 		private void InventoryPressed(object sender, RoutedEventArgs e)
-        {
+		{
 			ViewSwitch();
-        }
+		}
 
-        /// <summary>
-        /// for when view is to be switched
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void HomePressed(object sender, RoutedEventArgs e)
-        {
-            ViewSwitch();
-        }
+		/// <summary>
+		/// for when view is to be switched
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void HomePressed(object sender, RoutedEventArgs e)
+		{
+			ViewSwitch();
+		}
 
-        /// <summary>
-        /// for when view is to be switched
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void StatsPressed(object sender, RoutedEventArgs e)
-        {
-            ViewSwitch();
-        }
-        #endregion
-        
+		/// <summary>
+		/// for when view is to be switched
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void StatsPressed(object sender, RoutedEventArgs e)
+		{
+			ViewSwitch();
+		}
+		#endregion
+		
 		/// <summary>
 		/// this will tell the user to find their data. it then will check if the data is there and add it to the savedPaths file
 		/// </summary>
@@ -623,22 +633,22 @@ namespace aincradSaveModifier
 			bool statsFound;
 			bool inventoryFound;
 
-            statsFile = folder + "\\avtr_5def9d3c-c59e-4b77-91fd-c7b23323db58";
-            inventoryFile = folder + "\\avtr_73e1a1b0-d9b9-4dc4-9544-5dae72ea8e64";
+			statsFile = folder + "\\avtr_5def9d3c-c59e-4b77-91fd-c7b23323db58";
+			inventoryFile = folder + "\\avtr_73e1a1b0-d9b9-4dc4-9544-5dae72ea8e64";
 
-            
+			
 
-            statsFound = File.Exists(statsFile);
-            inventoryFound = File.Exists(inventoryFile);
+			statsFound = File.Exists(statsFile);
+			inventoryFound = File.Exists(inventoryFile);
 
-            while (statsFound != true || inventoryFound != true)
+			while (statsFound != true || inventoryFound != true)
 			{
 				folder = getPath();
 
-                statsFile = folder + "\\avtr_5def9d3c-c59e-4b77-91fd-c7b23323db58";
-                inventoryFile = folder + "\\avtr_73e1a1b0-d9b9-4dc4-9544-5dae72ea8e64";
+				statsFile = folder + "\\avtr_5def9d3c-c59e-4b77-91fd-c7b23323db58";
+				inventoryFile = folder + "\\avtr_73e1a1b0-d9b9-4dc4-9544-5dae72ea8e64";
 
-                statsFound = File.Exists(statsFile);
+				statsFound = File.Exists(statsFile);
 				inventoryFound = File.Exists(inventoryFile);
 
 				if (statsFound != true || inventoryFound != false)
@@ -651,26 +661,22 @@ namespace aincradSaveModifier
 			this.InventoryStatus.Text = "found";
 
 			this.path = folder;
-			
 
+			string[] sortedPaths;
 
-
-            string[] sortedPaths;
-
-
-            using (StreamWriter writer = new StreamWriter("BaseData/savedPaths.txt", true))
+			using (StreamWriter writer = new StreamWriter("BaseData/savedPaths.txt", true))
 			{
 				writer.Write(folder + "$");
 				writer.Close();
-            }
+			}
 			sortedPaths = checkPathFile();
 			File.WriteAllText("BaseData/savedPaths.txt", string.Empty);
 
 			this.userIDS.Items.Clear();
-            for (int i = 0; i < sortedPaths.Length; i++)
-            {
-                using (StreamWriter writer = new StreamWriter("BaseData/savedPaths.txt", true))
-                {
+			for (int i = 0; i < sortedPaths.Length; i++)
+			{
+				using (StreamWriter writer = new StreamWriter("BaseData/savedPaths.txt", true))
+				{
 					if (sortedPaths[i] != "")
 					{
 						writer.Write(sortedPaths[i] + "$");
@@ -678,10 +684,10 @@ namespace aincradSaveModifier
 						pathItemBox(sortedPaths[i].Split("\\")[sortedPaths[i].Split("\\").Length - 1]);
 					}
 					
-                }
-                
-            }
-        }
+				}
+				
+			}
+		}
 
 		/// <summary>
 		/// this will have the user open the folder to create the files in, and create them. it will then add the path to the savedPaths file
@@ -692,18 +698,18 @@ namespace aincradSaveModifier
 		{
 			string folderPath;
 			System.Windows.MessageBox.Show("go to vrchat local avatar data folder");
-            folderPath = getPath();
+			folderPath = getPath();
 
 			while (folderPath == string.Empty) 
 			{
-                System.Windows.MessageBox.Show("go to vrchat local avatar data folder");
-                folderPath = getPath();
-            }
+				System.Windows.MessageBox.Show("go to vrchat local avatar data folder");
+				folderPath = getPath();
+			}
 
 			string UserID = folderPath + "$";
 
-            using (StreamWriter writer = new StreamWriter("BaseData/savedPaths.txt", true))
-            {
+			using (StreamWriter writer = new StreamWriter("BaseData/savedPaths.txt", true))
+			{
 				writer.WriteLine(folderPath + "$");
 				writer.Close();
 
@@ -714,31 +720,28 @@ namespace aincradSaveModifier
 					string wholeFile = File.ReadAllText("BaseData/savedPaths.txt");
 					string currentFile = wholeFile.Split("$")[i];
 					pathItemBox(currentFile.Split("\\")[currentFile.Split("\\").Length - 1]);
-                }
-            }
+				}
+			}
 
-            try
+			try
 			{
 				File.Copy("BaseData\\avtr_5def9d3c-c59e-4b77-91fd-c7b23323db58", folderPath + "\\avtr_5def9d3c-c59e-4b77-91fd-c7b23323db58");
-                System.Windows.MessageBox.Show("Save File Created");
-            } catch (Exception ex)
+				System.Windows.MessageBox.Show("Save File Created");
+			} catch (Exception ex)
 			{
-                System.Windows.MessageBox.Show("Save File NOT Created");
-            }
+				System.Windows.MessageBox.Show("Save File NOT Created");
+			}
 
-            try
-            {
-                File.Copy("BaseData\\avtr_73e1a1b0-d9b9-4dc4-9544-5dae72ea8e64", folderPath + "\\avtr_73e1a1b0-d9b9-4dc4-9544-5dae72ea8e64");
-                System.Windows.MessageBox.Show("Save File Created");
-            }
-            catch (Exception ex)
-            {
-                System.Windows.MessageBox.Show("Save File NOT Created");
-            }
-
-
-
-        }
+			try
+			{
+				File.Copy("BaseData\\avtr_73e1a1b0-d9b9-4dc4-9544-5dae72ea8e64", folderPath + "\\avtr_73e1a1b0-d9b9-4dc4-9544-5dae72ea8e64");
+				System.Windows.MessageBox.Show("Save File Created");
+			}
+			catch (Exception ex)
+			{
+				System.Windows.MessageBox.Show("Save File NOT Created");
+			}
+		}
 
 		/// <summary>
 		/// this will get the selected item from a list box and get the path from the savedPaths file and load the save files
@@ -747,41 +750,43 @@ namespace aincradSaveModifier
 		/// <param name="e"></param>
 		private void UseSelected(object sender, RoutedEventArgs e)
 		{
-            int index = this.userIDS.SelectedIndex;
+			int index = this.userIDS.SelectedIndex;
 
-            string wholeFile = File.ReadAllText("BaseData/savedPaths.txt");
-            string selectedPath = wholeFile.Split("$")[index];
+			string wholeFile = File.ReadAllText("BaseData/savedPaths.txt");
+			string selectedPath = wholeFile.Split("$")[index];
 
-            string statsFile;
-            string inventoryFile;
-            bool statsFound;
-            bool inventoryFound;
+			string statsFile;
+			string inventoryFile;
+			bool statsFound;
+			bool inventoryFound;
 
-            statsFile = selectedPath + "\\avtr_5def9d3c-c59e-4b77-91fd-c7b23323db58";
-            inventoryFile = selectedPath + "\\avtr_73e1a1b0-d9b9-4dc4-9544-5dae72ea8e64";
+			statsFile = selectedPath + "\\avtr_5def9d3c-c59e-4b77-91fd-c7b23323db58";
+			inventoryFile = selectedPath + "\\avtr_73e1a1b0-d9b9-4dc4-9544-5dae72ea8e64";
 
 
+			statsFound = File.Exists(statsFile);
+			inventoryFound = File.Exists(inventoryFile);
 
-            statsFound = File.Exists(statsFile);
-            inventoryFound = File.Exists(inventoryFile);
+			while (statsFound != true || inventoryFound != true)
+			{
+				selectedPath = getPath();
 
-            while (statsFound != true || inventoryFound != true)
-            {
-                selectedPath = getPath();
+				statsFile = selectedPath + "\\avtr_5def9d3c-c59e-4b77-91fd-c7b23323db58";
+				inventoryFile = selectedPath + "\\avtr_73e1a1b0-d9b9-4dc4-9544-5dae72ea8e64";
 
-                statsFile = selectedPath + "\\avtr_5def9d3c-c59e-4b77-91fd-c7b23323db58";
-                inventoryFile = selectedPath + "\\avtr_73e1a1b0-d9b9-4dc4-9544-5dae72ea8e64";
+				statsFound = File.Exists(statsFile);
+				inventoryFound = File.Exists(inventoryFile);
 
-                statsFound = File.Exists(statsFile);
-                inventoryFound = File.Exists(inventoryFile);
-
-                if (statsFound != true || inventoryFound != false)
-                {
-                    System.Windows.MessageBox.Show("data not found");
-                }
-            }
+				if (statsFound != true || inventoryFound != false)
+				{
+					System.Windows.MessageBox.Show("data not found");
+				}
+			}
 			this.path = selectedPath;
-        }
-        #endregion
-    }
+
+			this.StatsStatus.Text = "found";
+			this.InventoryStatus.Text = "found";
+		}
+		#endregion
+	}
 }
