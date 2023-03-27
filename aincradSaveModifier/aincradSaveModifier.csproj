@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <None Remove="Fonts\SAO UI TT.ttf" />
+    <None Remove="Images\icon.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -55,12 +56,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Images\" />
     <Folder Include="MVVM\Model\" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Fonts\SAO UI TT.ttf" />
+    <Resource Include="Images\icon.png" />
   </ItemGroup>
 
 </Project>
