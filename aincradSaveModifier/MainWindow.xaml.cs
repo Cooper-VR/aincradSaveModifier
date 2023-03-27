@@ -458,12 +458,12 @@ namespace aincradSaveModifier
 
 			//base string repusenting the save data unwritten
 			string inputString = "{\"animationParameters\":[{\"name\":\"newparameter_0\", \"value\":placeHolder}, {\"name\":\"newparameter_1\", \"value\":placeHolder}, {\"name\":\"newparameter_2\", \"value\":placeHolder}, {\"name\":\"newparameter_3\", \"value\":placeHolder}, {\"name\":\"newparameter_4\", \"value\":placeHolder}, {\"name\":\"newparameter_5\", \"value\":placeHolder}, {\"name\":\"newparameter_6\", \"value\":placeHolder}, {\"name\":\"newparameter_7\", \"value\":placeHolder}, {\"name\":\"newparameter_8\", \"value\":placeHolder}, {\"name\":\"newparameter_9\", \"value\":placeHolder}, {\"name\":\"newparameter_10\", \"value\":placeHolder}, {\"name\":\"newparameter_11\", \"value\":placeHolder}, {\"name\":\"newparameter_12\", \"value\":placeHolder}, {\"name\":\"newparameter_13\", \"value\":placeHolder}, {\"name\":\"newparameter_14\", \"value\":placeHolder}, {\"name\":\"newparameter_15\", \"value\":placeHolder}]}";
-			string statsString;
+			string statsString = inputString;
 			//this will replace "placeholder" withcorrosplonding values
 			for (int i = 0; i < 16; i++)
 			{
 				var regex = new Regex(Regex.Escape("placeHolder"));
-				statsString = regex.Replace(inputString, stats[i].ToString(), 1);
+				statsString = regex.Replace(statsString, stats[i].ToString(), 1);
 			}
 
 			//clear the file
@@ -556,7 +556,7 @@ namespace aincradSaveModifier
 				}
 			}
 
-			string inventoryString;
+			string inventoryString = inputString;
 
 			//this will replace "placeholder" i, keep the Regex class in mind
 			for (int i = 0; i < 16; i++)
@@ -795,8 +795,8 @@ namespace aincradSaveModifier
 
 				if (statsFound != true || inventoryFound != false)
 				{
-					this.InventoryStatus.text = "not found";
-					this.StatsStatus.text = "not found";
+					this.InventoryStatus.Text = "not found";
+					this.StatsStatus.Text = "not found";
 					System.Windows.MessageBox.Show("data not found");
 				}
 			}

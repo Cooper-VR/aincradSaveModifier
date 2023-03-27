@@ -1,0 +1,10 @@
+C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\bin\Release\net6.0-windows\publish\aincradSaveModifier.exe
+C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\bin\Release\net6.0-windows\publish\aincradSaveModifier.dll
+C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\bin\Release\net6.0-windows\publish\aincradSaveModifier.deps.json
+C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\bin\Release\net6.0-windows\publish\aincradSaveModifier.runtimeconfig.json
+C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\bin\Release\net6.0-windows\publish\aincradSaveModifier.pdb
+C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\bin\Release\net6.0-windows\publish\JsonSubTypes.dll
+C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\bin\Release\net6.0-windows\publish\Newtonsoft.Json.dll
+C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\bin\Release\net6.0-windows\publish\Polly.dll
+C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\bin\Release\net6.0-windows\publish\RestSharp.dll
+C:\Users\cbowe540\CooperBower\gitHub\aincradSaveModifier\aincradSaveModifier\bin\Release\net6.0-windows\publish\VRChat.API.dll
