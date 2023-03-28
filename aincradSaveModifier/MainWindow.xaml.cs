@@ -18,6 +18,7 @@ namespace aincradSaveModifier
 		private string stats;
 		private string inventory;
 		private string path;
+		private string inputString = "{\"animationParameters\":[{\"name\":\"newparameter_0\", \"value\":placeHolder}, {\"name\":\"newparameter_1\", \"value\":placeHolder}, {\"name\":\"newparameter_2\", \"value\":placeHolder}, {\"name\":\"newparameter_3\", \"value\":placeHolder}, {\"name\":\"newparameter_4\", \"value\":placeHolder}, {\"name\":\"newparameter_5\", \"value\":placeHolder}, {\"name\":\"newparameter_6\", \"value\":placeHolder}, {\"name\":\"newparameter_7\", \"value\":placeHolder}, {\"name\":\"newparameter_8\", \"value\":placeHolder}, {\"name\":\"newparameter_9\", \"value\":placeHolder}, {\"name\":\"newparameter_10\", \"value\":placeHolder}, {\"name\":\"newparameter_11\", \"value\":placeHolder}, {\"name\":\"newparameter_12\", \"value\":placeHolder}, {\"name\":\"newparameter_13\", \"value\":placeHolder}, {\"name\":\"newparameter_14\", \"value\":placeHolder}, {\"name\":\"newparameter_15\", \"value\":placeHolder}]}";
 		#endregion
 		
 		/// <summary>
@@ -397,6 +398,33 @@ namespace aincradSaveModifier
 
 			return playTime;
 		}
+		
+		/// <summary>
+		/// this will take in data like a string an array for the data and the then write the file
+		/// </summary>
+		/// <param name="amount">the amount of time the placeholder substring shows up</param>
+		/// <param name="path">a path to the file to write to</param>
+		/// <param name="data">the data in the form of a double array</param>
+		private void fileWriter(int amount, string path, double[] data)
+		{
+			string replacmentString = this.inputString;
+
+			//this will replace "placeholder" i, keep the Regex class in mind
+			for (int i = 0; i < amount; i++)
+			{
+				var regex = new Regex(Regex.Escape("placeHolder"));
+				replacmentString = regex.Replace(inputString, data[i].ToString(), 1);
+			}
+
+			File.WriteAllText(path, string.Empty);
+
+			using (StreamWriter writer = new StreamWriter(path, true))
+			{
+				writer.Write(replacmentString);
+				writer.Close();
+			}
+		}
+		
 		#endregion
 
 		#region button presses
@@ -455,25 +483,8 @@ namespace aincradSaveModifier
 			stats[13] = stats[13];
 			stats[14] = stats[14];
 			stats[15] = stats[15];
-
-			//base string repusenting the save data unwritten
-			string inputString = "{\"animationParameters\":[{\"name\":\"newparameter_0\", \"value\":placeHolder}, {\"name\":\"newparameter_1\", \"value\":placeHolder}, {\"name\":\"newparameter_2\", \"value\":placeHolder}, {\"name\":\"newparameter_3\", \"value\":placeHolder}, {\"name\":\"newparameter_4\", \"value\":placeHolder}, {\"name\":\"newparameter_5\", \"value\":placeHolder}, {\"name\":\"newparameter_6\", \"value\":placeHolder}, {\"name\":\"newparameter_7\", \"value\":placeHolder}, {\"name\":\"newparameter_8\", \"value\":placeHolder}, {\"name\":\"newparameter_9\", \"value\":placeHolder}, {\"name\":\"newparameter_10\", \"value\":placeHolder}, {\"name\":\"newparameter_11\", \"value\":placeHolder}, {\"name\":\"newparameter_12\", \"value\":placeHolder}, {\"name\":\"newparameter_13\", \"value\":placeHolder}, {\"name\":\"newparameter_14\", \"value\":placeHolder}, {\"name\":\"newparameter_15\", \"value\":placeHolder}]}";
-			string statsString = inputString;
-			//this will replace "placeholder" withcorrosplonding values
-			for (int i = 0; i < 16; i++)
-			{
-				var regex = new Regex(Regex.Escape("placeHolder"));
-				statsString = regex.Replace(statsString, stats[i].ToString(), 1);
-			}
-
-			//clear the file
-			File.WriteAllText(this.stats, string.Empty);
-			//write the string to the file
-			using (StreamWriter writer = new StreamWriter(this.stats, true))
-			{
-				writer.Write(statsString);
-				writer.Close();
-			}
+			
+			fileWriter(16, this.stats, stats);
 			#endregion
 			
 			#region set inventory
@@ -556,22 +567,7 @@ namespace aincradSaveModifier
 				}
 			}
 
-			string inventoryString = inputString;
-
-			//this will replace "placeholder" i, keep the Regex class in mind
-			for (int i = 0; i < 16; i++)
-			{
-				var regex = new Regex(Regex.Escape("placeHolder"));
-				inventoryString = regex.Replace(inputString, inventoryData[i].ToString(), 1);
-			}
-
-			File.WriteAllText(this.inventory, string.Empty);
-
-			using (StreamWriter writer = new StreamWriter(this.inventory, true))
-			{
-				writer.Write(inventoryString);
-				writer.Close();
-			}
+			fileWriter(16, this.inventory, inventoryData);
 			#endregion
 		}
 
