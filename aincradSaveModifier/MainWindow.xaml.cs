@@ -364,7 +364,7 @@ namespace aincradSaveModifier
 			{
 				System.Windows.MessageBox.Show("invalid input for minutes");
 				minutes = 0;
-			}
+			  }
 
 			//convert to seconds to compare to time mulipliers
 			int totalSeconds = (hours * 3600) + (minutes * 60);
@@ -405,15 +405,15 @@ namespace aincradSaveModifier
 		/// <param name="amount">the amount of time the placeholder substring shows up</param>
 		/// <param name="path">a path to the file to write to</param>
 		/// <param name="data">the data in the form of a double array</param>
-		private void fileWriter(int amount, string path, double[] data)
+		private void fileWriter(int amount, string path, double[] doneData)
 		{
-			string replacmentString = this.inputString;
+			string replacmentString = "{\"animationParameters\":[{\"name\":\"newparameter_0\", \"value\":placeHolder}, {\"name\":\"newparameter_1\", \"value\":placeHolder}, {\"name\":\"newparameter_2\", \"value\":placeHolder}, {\"name\":\"newparameter_3\", \"value\":placeHolder}, {\"name\":\"newparameter_4\", \"value\":placeHolder}, {\"name\":\"newparameter_5\", \"value\":placeHolder}, {\"name\":\"newparameter_6\", \"value\":placeHolder}, {\"name\":\"newparameter_7\", \"value\":placeHolder}, {\"name\":\"newparameter_8\", \"value\":placeHolder}, {\"name\":\"newparameter_9\", \"value\":placeHolder}, {\"name\":\"newparameter_10\", \"value\":placeHolder}, {\"name\":\"newparameter_11\", \"value\":placeHolder}, {\"name\":\"newparameter_12\", \"value\":placeHolder}, {\"name\":\"newparameter_13\", \"value\":placeHolder}, {\"name\":\"newparameter_14\", \"value\":placeHolder}, {\"name\":\"newparameter_15\", \"value\":placeHolder}]}";
+            var regex = new Regex(Regex.Escape("placeHolder"));
 
 			//this will replace "placeholder" i, keep the Regex class in mind
 			for (int i = 0; i < amount; i++)
 			{
-				var regex = new Regex(Regex.Escape("placeHolder"));
-				replacmentString = regex.Replace(inputString, data[i].ToString(), 1);
+				replacmentString = regex.Replace(replacmentString, doneData[i].ToString(), 1);
 			}
 
 			File.WriteAllText(path, string.Empty);
@@ -434,7 +434,7 @@ namespace aincradSaveModifier
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
 		private void GetData(object sender, RoutedEventArgs e)
-		 {
+		{
 			
 			//check if the path saved is valid, return if null because of denied access error
 			if (this.path == null)
