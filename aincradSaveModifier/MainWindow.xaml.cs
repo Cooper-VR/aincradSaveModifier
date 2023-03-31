@@ -18,6 +18,7 @@ namespace aincradSaveModifier
 		private string stats;
 		private string inventory;
 		private string path;
+		private string inputString = "{\"animationParameters\":[{\"name\":\"newparameter_0\", \"value\":placeHolder}, {\"name\":\"newparameter_1\", \"value\":placeHolder}, {\"name\":\"newparameter_2\", \"value\":placeHolder}, {\"name\":\"newparameter_3\", \"value\":placeHolder}, {\"name\":\"newparameter_4\", \"value\":placeHolder}, {\"name\":\"newparameter_5\", \"value\":placeHolder}, {\"name\":\"newparameter_6\", \"value\":placeHolder}, {\"name\":\"newparameter_7\", \"value\":placeHolder}, {\"name\":\"newparameter_8\", \"value\":placeHolder}, {\"name\":\"newparameter_9\", \"value\":placeHolder}, {\"name\":\"newparameter_10\", \"value\":placeHolder}, {\"name\":\"newparameter_11\", \"value\":placeHolder}, {\"name\":\"newparameter_12\", \"value\":placeHolder}, {\"name\":\"newparameter_13\", \"value\":placeHolder}, {\"name\":\"newparameter_14\", \"value\":placeHolder}, {\"name\":\"newparameter_15\", \"value\":placeHolder}]}";
 		#endregion
 		
 		/// <summary>
@@ -280,8 +281,10 @@ namespace aincradSaveModifier
 		/// <param name="content"></param>
 		public void pathItemBox(string content)
 		{
+			//create a new listboxitem
 			var listBox = new System.Windows.Controls.ListBoxItem();
 
+			//set the properties
 			listBox.Background = (Brush)new BrushConverter().ConvertFrom("#001D2A");
 			listBox.BorderThickness = new Thickness(2);
 			listBox.Foreground = new SolidColorBrush(Colors.White);
@@ -289,6 +292,7 @@ namespace aincradSaveModifier
 			listBox.FontFamily = new FontFamily("/Fonts/#SAO UI TT");
 			listBox.FontSize = 18;
 
+			//add the listbox to the xaml
 			this.userIDS.Items.Add(listBox);
 
 		}
@@ -299,10 +303,12 @@ namespace aincradSaveModifier
 		/// <returns>returns a new array with the with the unique paths</returns>
 		public string[] checkPathFile()
 		{
+			//create a new string array with paths
 			string[] NewPathArray = File.ReadAllText("BaseData/savedPaths.txt").Split("$");
 
 			List<string> uniqueItems = new List<string>();
 
+			//use this to make a list of only the unique items
 			foreach (string item in NewPathArray)
 			{
 				if (!uniqueItems.Contains(item))
@@ -311,12 +317,9 @@ namespace aincradSaveModifier
 				}
 			}
 
+			//convert it to an array
 			string[] newArray = uniqueItems.ToArray();
 
-			foreach (string item in newArray)
-			{
-				Console.WriteLine(item);
-			}
 			return newArray;
 		}
 
@@ -326,6 +329,7 @@ namespace aincradSaveModifier
 		/// <returns>returns a double array with the location parameters</returns>
 		private double[] SetLoation()
 		{
+			//this method is not set, need more data to see the cords better, will spawn user at TOB
 			double[] stats = new double[3];
 			stats[0] = this.xLocation.Value;
 			stats[1] = this.yLocation.Value;
@@ -340,17 +344,16 @@ namespace aincradSaveModifier
 		/// <returns>returns a double array with the paremeters for playtime</returns>
 		private double[] SetPlayTime()
 		{
-			
+			//this is all the known values
 			double[] playTime = new double[7];
-
 		
 			playTime[0] = -1;
 			playTime[1] = -1;
 
-
 			int hours;
 			int minutes;
 
+			//will parse the hours and min
 			if (int.TryParse(this.Hours.Text, out hours) != true)
 			{
 				System.Windows.MessageBox.Show("invalid input for hours");
@@ -361,8 +364,9 @@ namespace aincradSaveModifier
 			{
 				System.Windows.MessageBox.Show("invalid input for minutes");
 				minutes = 0;
-			}
+			  }
 
+			//convert to seconds to compare to time mulipliers
 			int totalSeconds = (hours * 3600) + (minutes * 60);
 
 			double bigMuliplier = 18 * 3600 + 12 * 60;
@@ -371,8 +375,7 @@ namespace aincradSaveModifier
 			int bigIterations;
 			int smallIterations;
 
-			
-
+			//check to see if it can make param 11 bigger than 0
 			if (totalSeconds > bigMuliplier)
 			{
 				bigIterations = (int)Math.Floor((totalSeconds / bigMuliplier));
@@ -381,19 +384,47 @@ namespace aincradSaveModifier
 
 			double remainingSeconds = totalSeconds % bigMuliplier;
 
+			//this will make param 12 the propert value
 			if (remainingSeconds > smallMuliplier)
 			{
 				smallIterations = (int)Math.Floor((remainingSeconds / smallMuliplier));
 				playTime[3] = (double)smallIterations / (double)65536;
 			}
 
+			//set these to placeholder numbers to check and maybe change later
 			playTime[4] = -1;
 			playTime[5] = -1;
 			playTime[6] = -1;
 
-
 			return playTime;
 		}
+		
+		/// <summary>
+		/// this will take in data like a string an array for the data and the then write the file
+		/// </summary>
+		/// <param name="amount">the amount of time the placeholder substring shows up</param>
+		/// <param name="path">a path to the file to write to</param>
+		/// <param name="data">the data in the form of a double array</param>
+		private void fileWriter(int amount, string path, double[] doneData)
+		{
+			string replacmentString = "{\"animationParameters\":[{\"name\":\"newparameter_0\", \"value\":placeHolder}, {\"name\":\"newparameter_1\", \"value\":placeHolder}, {\"name\":\"newparameter_2\", \"value\":placeHolder}, {\"name\":\"newparameter_3\", \"value\":placeHolder}, {\"name\":\"newparameter_4\", \"value\":placeHolder}, {\"name\":\"newparameter_5\", \"value\":placeHolder}, {\"name\":\"newparameter_6\", \"value\":placeHolder}, {\"name\":\"newparameter_7\", \"value\":placeHolder}, {\"name\":\"newparameter_8\", \"value\":placeHolder}, {\"name\":\"newparameter_9\", \"value\":placeHolder}, {\"name\":\"newparameter_10\", \"value\":placeHolder}, {\"name\":\"newparameter_11\", \"value\":placeHolder}, {\"name\":\"newparameter_12\", \"value\":placeHolder}, {\"name\":\"newparameter_13\", \"value\":placeHolder}, {\"name\":\"newparameter_14\", \"value\":placeHolder}, {\"name\":\"newparameter_15\", \"value\":placeHolder}]}";
+            var regex = new Regex(Regex.Escape("placeHolder"));
+
+			//this will replace "placeholder" i, keep the Regex class in mind
+			for (int i = 0; i < amount; i++)
+			{
+				replacmentString = regex.Replace(replacmentString, doneData[i].ToString(), 1);
+			}
+
+			File.WriteAllText(path, string.Empty);
+
+			using (StreamWriter writer = new StreamWriter(path, true))
+			{
+				writer.Write(replacmentString);
+				writer.Close();
+			}
+		}
+		
 		#endregion
 
 		#region button presses
@@ -403,21 +434,23 @@ namespace aincradSaveModifier
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
 		private void GetData(object sender, RoutedEventArgs e)
-		 {
+		{
 			
-			//path check
+			//check if the path saved is valid, return if null because of denied access error
 			if (this.path == null)
 			{
 				System.Windows.MessageBox.Show("file location not specified");
 				return;
 			}
+
+			//will append avtr names to base path to read and write
 			if (path != string.Empty)
 			{
 				this.stats = path + "\\avtr_5def9d3c-c59e-4b77-91fd-c7b23323db58";
 				this.inventory = path + "\\avtr_73e1a1b0-d9b9-4dc4-9544-5dae72ea8e64";
 			}
 
-			//gets all the data I might need including old data
+			//create two arrays for each one is new data, other is old data
 			double[] statData = new double[16];
 			double[] stats = jsonStrip(jsonDecompile(this.stats));
 
@@ -427,17 +460,20 @@ namespace aincradSaveModifier
 			#region set stats
 			statData[0] = stats[0];
 			stats[1] = ((double)this.exp.Value) / (double)65536;
+			//health is spotty with the muliplier, its 250 * (amount/256), not value * 256
 			stats[2] = ((double)this.health.Value) / (double)256;
 			stats[3] = ((double)this.col.Value) / (double)65536;
 
 			double[] LocationData = SetLoation();
 
+			//set the locaton data, don't worry about z aincrad chek if its valid
 			stats[4] = LocationData[0];
 			stats[5] = LocationData[1];
 			stats[6] = LocationData[2];
 
 			double[] playTime = SetPlayTime();
 			
+			//just set individually and dont check for "-1" value
 			stats[7] = stats[7];
 			stats[8] = stats[8];
 			stats[9] = stats[9];
@@ -447,22 +483,8 @@ namespace aincradSaveModifier
 			stats[13] = stats[13];
 			stats[14] = stats[14];
 			stats[15] = stats[15];
-
-			string inputString = "{\"animationParameters\":[{\"name\":\"newparameter_0\", \"value\":placeHolder}, {\"name\":\"newparameter_1\", \"value\":placeHolder}, {\"name\":\"newparameter_2\", \"value\":placeHolder}, {\"name\":\"newparameter_3\", \"value\":placeHolder}, {\"name\":\"newparameter_4\", \"value\":placeHolder}, {\"name\":\"newparameter_5\", \"value\":placeHolder}, {\"name\":\"newparameter_6\", \"value\":placeHolder}, {\"name\":\"newparameter_7\", \"value\":placeHolder}, {\"name\":\"newparameter_8\", \"value\":placeHolder}, {\"name\":\"newparameter_9\", \"value\":placeHolder}, {\"name\":\"newparameter_10\", \"value\":placeHolder}, {\"name\":\"newparameter_11\", \"value\":placeHolder}, {\"name\":\"newparameter_12\", \"value\":placeHolder}, {\"name\":\"newparameter_13\", \"value\":placeHolder}, {\"name\":\"newparameter_14\", \"value\":placeHolder}, {\"name\":\"newparameter_15\", \"value\":placeHolder}]}";
-
-			for (int i = 0; i < 16; i++)
-			{
-				var regex = new Regex(Regex.Escape("placeHolder"));
-				inputString = regex.Replace(inputString, stats[i].ToString(), 1);
-			}
-
-			File.WriteAllText(this.stats, string.Empty);
-
-			using (StreamWriter writer = new StreamWriter(this.stats, true))
-			{
-				writer.Write(inputString);
-				writer.Close();
-			}
+			
+			fileWriter(16, this.stats, stats);
 			#endregion
 			
 			#region set inventory
@@ -545,20 +567,7 @@ namespace aincradSaveModifier
 				}
 			}
 
-
-			for (int i = 0; i < 16; i++)
-			{
-				var regex = new Regex(Regex.Escape("placeHolder"));
-				inputString = regex.Replace(inputString, inventoryData[i].ToString(), 1);
-			}
-
-			File.WriteAllText(this.inventory, string.Empty);
-
-			using (StreamWriter writer = new StreamWriter(this.inventory, true))
-			{
-				writer.Write(inputString);
-				writer.Close();
-			}
+			fileWriter(16, this.inventory, inventoryData);
 			#endregion
 		}
 
@@ -653,6 +662,9 @@ namespace aincradSaveModifier
 
 				if (statsFound != true || inventoryFound != false)
 				{
+					this.StatsStatus.Text = "not found";
+					this.InventoryStatus.Text = "not found";
+
 					System.Windows.MessageBox.Show("data not found, maybe try creating new data or finding the correct folder");
 					break;
 				}
@@ -779,6 +791,8 @@ namespace aincradSaveModifier
 
 				if (statsFound != true || inventoryFound != false)
 				{
+					this.InventoryStatus.Text = "not found";
+					this.StatsStatus.Text = "not found";
 					System.Windows.MessageBox.Show("data not found");
 				}
 			}
