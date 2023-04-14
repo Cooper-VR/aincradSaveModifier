@@ -467,9 +467,9 @@ namespace aincradSaveModifier
 			double[] LocationData = SetLoation();
 
 			//set the locaton data, don't worry about z aincrad chek if its valid
-			stats[4] = LocationData[0];
-			stats[5] = LocationData[1];
-			stats[6] = LocationData[2];
+			stats[4] = stats[4];
+			stats[5] = stats[5];
+			stats[6] = stats[6];
 
 			double[] playTime = SetPlayTime();
 			
